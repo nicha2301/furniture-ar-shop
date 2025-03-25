@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "210968169971",
+    "project_id": "cresaleco",
+    "storage_bucket": "cresaleco.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210968169971:android:afdef50a3f7d0d88409686",
+        "android_client_info": {
+          "package_name": "com.inspireui.mstorecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5EdzEQrQMtvv0-XT-0696g0C4wBRjEVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

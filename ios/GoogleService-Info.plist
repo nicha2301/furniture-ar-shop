@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>190592056642-m5eh7bo3akegs2mi9qjkl7c0ojjk5fmo.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.190592056642-m5eh7bo3akegs2mi9qjkl7c0ojjk5fmo</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>190592056642-3fltgmkarnv4a8t9mmujt1q361mtu3jo.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAjqVUDo6PveaJDPYGJ96lmLRcHXHkHUgk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>190592056642</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.inspireui.mstore</string>
+	<key>PROJECT_ID</key>
+	<string>beostore-a39cf</string>
+	<key>STORAGE_BUCKET</key>
+	<string>beostore-a39cf.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:190592056642:ios:8ed355b230aadb08351cdb</string>
+	<key>DATABASE_URL</key>
+	<string>https://beostore-a39cf.firebaseio.com</string>
+</dict>
+</plist>

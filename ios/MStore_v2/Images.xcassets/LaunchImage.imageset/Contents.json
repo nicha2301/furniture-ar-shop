@@ -1,0 +1,66 @@
+{
+  "images" : [
+    {
+      "filename" : "Default-Landscape.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Default-Landscape@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Default-Landscape-812h@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "filename" : "Default-Landscape-736h@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x",
+      "subtype" : "736h"
+    },
+    {
+      "filename" : "Default-667h@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x",
+      "subtype" : "667h"
+    },
+    {
+      "filename" : "Default-Portrait.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "unassigned" : true
+    },
+    {
+      "filename" : "Default-Portrait@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x",
+      "unassigned" : true
+    },
+    {
+      "filename" : "Default@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x",
+      "unassigned" : true
+    },
+    {
+      "filename" : "Default-Portrait-812h@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x",
+      "unassigned" : true
+    },
+    {
+      "filename" : "Default-Portrait-736h@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x",
+      "subtype" : "736h",
+      "unassigned" : true
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

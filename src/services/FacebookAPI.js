@@ -1,24 +1,44 @@
 import {Facebook} from '@expo';
 
 import {Config} from '@common';
-import {toast, log} from '@app/Omni';
+import {toast, log, warn} from '@app/Omni';
 
 class FacebookAPI {
   async login() {
-    const ask = await Facebook.logInWithReadPermissionsAsync(
-      Config.appFacebookId,
-      {
-        permissions: ['public_profile', 'email'],
-      },
-    );
-    const {type} = ask;
+    try {
+      console.log('Starting Facebook login...');
+      console.log('Using Facebook App ID:', Config.appFacebookId);
+      
+      const ask = await Facebook.logInWithReadPermissionsAsync(
+        Config.appFacebookId,
+        {
+          permissions: ['public_profile', 'email'],
+        },
+      );
+      
+      console.log('Facebook login response:', ask);
+      
+      if (!ask) {
+        console.log('Facebook login returned null');
+        return null;
+      }
 
-    if (type === 'success') {
-      const {token} = ask;
+      const {type} = ask;
+      console.log('Login type:', type);
 
-      return token;
+      if (type === 'success') {
+        const {token} = ask;
+        console.log('Got Facebook token:', token);
+        return token;
+      }
+      
+      console.log('Facebook login was not successful');
+      return null;
+    } catch (error) {
+      console.error('Facebook login error:', error);
+      warn('Facebook login error: ' + error.message);
+      return null;
     }
-    return null;
   }
 
   logout() {

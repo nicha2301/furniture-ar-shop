@@ -160,27 +160,38 @@ class LoginScreen extends PureComponent {
 
   onFBLoginPressHandle = () => {
     const {login} = this.props;
+    console.log('Starting Facebook login process...');
     this.setState({isLoading: true});
+    
     FacebookAPI.login()
       .then(async token => {
+        console.log('Facebook login token received:', token);
         if (token) {
+          console.log('Calling WPUserAPI.loginFacebook with token...');
           const json = await WPUserAPI.loginFacebook(token);
-          warn(['json', json]);
+          console.log('WPUserAPI.loginFacebook response:', json);
+          
           if (json === undefined) {
+            console.log('WPUserAPI.loginFacebook returned undefined');
             this.stopAndToast(Languages.GetDataError);
           } else if (json.error || json.message) {
+            console.log('WPUserAPI.loginFacebook error:', json.error || json.message);
             this.stopAndToast(json.error || json.message);
           } else {
+            console.log('Getting customer data...');
             let customers = await WooWorker.getCustomerById(json.wp_user_id);
+            console.log('Customer data:', customers);
             customers = {...customers, token, picture: json.user.picture};
             this._onBack();
             login(customers, json.cookie);
           }
         } else {
+          console.log('No Facebook token received');
           this.setState({isLoading: false});
         }
       })
       .catch(err => {
+        console.error('Facebook login error:', err);
         warn(err);
         this.setState({isLoading: false});
       });

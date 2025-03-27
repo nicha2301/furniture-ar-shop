@@ -67,6 +67,7 @@ export default class SideMenu extends React.PureComponent {
   state: State;
   prevLeft: number;
   isOpen: boolean;
+  responder: any;
 
   constructor(props: Props) {
     super(props);
@@ -112,9 +113,7 @@ export default class SideMenu extends React.PureComponent {
         ),
       ),
     );
-  }
-
-  UNSAFE_componentWillMount(): void {
+    
     this.responder = PanResponder.create({
       onStartShouldSetResponderCapture: this.onStartShouldSetResponderCapture,
       onMoveShouldSetPanResponder: this.onMoveShouldSetPanResponder,
@@ -124,13 +123,13 @@ export default class SideMenu extends React.PureComponent {
     });
   }
 
-  UNSAFE_componentWillReceiveProps(props: Props): void {
+  componentDidUpdate(prevProps: Props): void {
     if (
-      typeof props.isOpen !== 'undefined' &&
-      this.isOpen !== props.isOpen &&
-      (props.autoClosing || this.isOpen === false)
+      typeof this.props.isOpen !== 'undefined' &&
+      prevProps.isOpen !== this.props.isOpen &&
+      (this.props.autoClosing || prevProps.isOpen === false)
     ) {
-      this.openMenu(props.isOpen);
+      this.openMenu(this.props.isOpen);
     }
   }
 

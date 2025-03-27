@@ -35,10 +35,11 @@ class DrawerDefault extends PureComponent {
   /**
    * Update when logged in
    */
-  UNSAFE_componentWillReceiveProps(props) {
-    const {userProfile} = props;
-
-    if (userProfile && userProfile.user) {
+  componentDidUpdate(prevProps) {
+    const {userProfile} = this.props;
+    
+    // Only update if userProfile or user state changes
+    if (prevProps.userProfile !== userProfile && userProfile && userProfile.user) {
       this.buttonList = [
         ...Config.menu.listMenu,
         ...Config.menu.listMenuLogged,

@@ -7,7 +7,8 @@ import _Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import _IconIO from 'react-native-vector-icons/Ionicons';
 import _Timer from 'react-timer-mixin';
 
-import store from '@store/configureStore';
+// Remove the circular dependency by not importing the store here
+// import store from '@store/configureStore';
 import { Images, Constants, Config } from '@common';
 import _Validate from './utils/Validate';
 import _BlockTimer from './utils/BlockTimer';
@@ -54,22 +55,30 @@ export const request = async (url, data = {}) => {
   }
 };
 
-// Drawer
-export const openDrawer = () =>
-  // EventEmitter.emit(Constants.EmitCode.SideMenuOpen)
-  store.dispatch({
+// Define these functions to be initialized later when the store is available
+let _openDrawer;
+let _closeDrawer;
+let _toggleDrawer;
+
+// Drawer - these will be initialized with the store reference
+export const openDrawer = () => _openDrawer && _openDrawer();
+export const closeDrawer = () => _closeDrawer && _closeDrawer();
+export const toggleDrawer = () => _toggleDrawer && _toggleDrawer();
+
+// Function to initialize the drawer actions with store
+export const initializeWithStore = (store) => {
+  _openDrawer = () => store.dispatch({
     type: Constants.EmitCode.SideMenuOpen,
   });
-export const closeDrawer = () =>
-  // EventEmitter.emit(Constants.EmitCode.SideMenuClose)
-  store.dispatch({
+  
+  _closeDrawer = () => store.dispatch({
     type: Constants.EmitCode.SideMenuClose,
   });
-export const toggleDrawer = () =>
-  // EventEmitter.emit(Constants.EmitCode.SideMenuClose)
-  store.dispatch({
+  
+  _toggleDrawer = () => store.dispatch({
     type: Constants.EmitCode.SideMenuToggle,
   });
+};
 
 /**
  * Display the message toast-like (work both with Android and iOS)

@@ -153,13 +153,13 @@ const MainBottomTab = createBottomTabNavigator();
 const MainNavigator = () => {
   return (
     <MainBottomTab.Navigator
-      lazy
       // eslint-disable-next-line react/no-unstable-nested-components
       tabBar={props => <TabBar {...props} />}
       screenOptions={{
         headerShown: false,
         showIcon: true,
         showLabel: true,
+        lazy: true
       }}>
       <MainBottomTab.Screen
         name={ROUTER.HOME_STACK}

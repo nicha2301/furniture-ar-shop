@@ -28,14 +28,17 @@ export default class Collapsible extends PureComponent {
     };
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (nextProps.collapsed !== this.props.collapsed) {
-      this._toggleCollapsed(nextProps.collapsed);
-    } else if (
-      nextProps.collapsed &&
-      nextProps.collapsedHeight !== this.props.collapsedHeight
+  componentDidUpdate(prevProps) {
+    // Handle collapsed state change
+    if (prevProps.collapsed !== this.props.collapsed) {
+      this._toggleCollapsed(this.props.collapsed);
+    } 
+    // Handle collapsedHeight change when component is collapsed
+    else if (
+      this.props.collapsed &&
+      prevProps.collapsedHeight !== this.props.collapsedHeight
     ) {
-      this.state.height.setValue(nextProps.collapsedHeight);
+      this.state.height.setValue(this.props.collapsedHeight);
     }
   }
 

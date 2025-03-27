@@ -59,12 +59,17 @@ class DrawerMultiChild extends PureComponent {
   /**
    * Update when logged in
    */
-  UNSAFE_componentWillReceiveProps(props) {
-    const {userProfile} = props;
-    const {error} = props.categories;
-    if (error) toast(error);
-
-    if (userProfile && userProfile.user) {
+  componentDidUpdate(prevProps) {
+    const {userProfile, categories} = this.props;
+    const {error} = categories;
+    
+    // Check for error changes
+    if (error && prevProps.categories.error !== error) {
+      toast(error);
+    }
+    
+    // Check for user profile changes
+    if (prevProps.userProfile !== userProfile && userProfile && userProfile.user) {
       this.buttonList = [
         ...Config.menu.listMenu,
         ...Config.menu.listMenuLogged,

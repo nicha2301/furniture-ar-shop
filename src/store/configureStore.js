@@ -5,7 +5,7 @@ import thunk from 'redux-thunk';
 
 import reducers from '@redux';
 import {Constants} from '@common';
-import {connectConsoleToReactotron} from '@app/Omni';
+import {connectConsoleToReactotron, initializeWithStore} from '@app/Omni';
 import './../../ReactotronConfig';
 
 const middleware = [
@@ -54,6 +54,10 @@ const configureStore = () => {
   } else {
     store = compose(applyMiddleware(...middleware))(createStore)(reducers);
   }
+  
+  // Initialize Omni drawer functions with the store
+  initializeWithStore(store);
+  
   return store;
 };
 

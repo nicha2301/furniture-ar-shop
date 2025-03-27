@@ -41,10 +41,11 @@ export default class Accordion extends PureComponent {
     };
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (nextProps.activeSection !== undefined) {
+  componentDidUpdate(prevProps) {
+    // Only update state if activeSection props changed
+    if (prevProps.activeSection !== this.props.activeSection && this.props.activeSection !== undefined) {
       this.setState({
-        activeSection: nextProps.activeSection,
+        activeSection: this.props.activeSection,
       });
     }
   }

@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import {useEffect, useCallback} from 'react';
-import {Animated, FlatList, RefreshControl} from 'react-native';
+import {Animated, FlatList, RefreshControl, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {Config, withTheme} from '@common';
@@ -62,41 +62,42 @@ const HorizonList = React.memo(
     );
 
     return (
-      <AnimatedFlatList
-        data={layout}
-        keyExtractor={(item, index) => `h_${index}`}
-        renderItem={({item, index}) => {
-          return (
-            <ListItem
-              key={`hList-${index}`}
-              item={item}
-              index={index}
-              language={language}
-              showCategoriesScreen={showCategoriesScreen}
-              onViewProductScreen={onViewProductScreen}
-              onShowAll={onShowAll}
+      <View style={styles.mainList}>
+        <AnimatedFlatList
+          data={layout}
+          keyExtractor={(item, index) => `h_${index}`}
+          renderItem={({item, index}) => {
+            return (
+              <ListItem
+                key={`hList-${index}`}
+                item={item}
+                index={index}
+                language={language}
+                showCategoriesScreen={showCategoriesScreen}
+                onViewProductScreen={onViewProductScreen}
+                onShowAll={onShowAll}
+              />
+            );
+          }}
+          ListHeaderComponent={() => {
+            if (!Config.Layout.HideHomeLogo) {
+              return <Header />;
+            }
+            return null;
+          }}
+          scrollEventThrottle={1}
+          refreshing={isFetching}
+          {...{onScroll}}
+          refreshControl={
+            <RefreshControl
+              tintColor={text}
+              refreshing={isFetching}
+              progressViewOffset={30}
+              onRefresh={fetchAll}
             />
-          );
-        }}
-        ListHeaderComponent={() => {
-          if (!Config.Layout.HideHomeLogo) {
-            return <Header />;
           }
-          return null;
-        }}
-        scrollEventThrottle={1}
-        refreshing={isFetching}
-        contentContainerStyle={styles.mainList}
-        {...{onScroll}}
-        refreshControl={
-          <RefreshControl
-            tintColor={text}
-            refreshing={isFetching}
-            progressViewOffset={30}
-            onRefresh={fetchAll}
-          />
-        }
-      />
+        />
+      </View>
     );
   },
 );

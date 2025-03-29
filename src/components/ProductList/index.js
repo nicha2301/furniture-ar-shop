@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, {Component} from 'react';
 import {
   FlatList,
   Image,
@@ -21,7 +21,7 @@ import styles from './styles';
 //   Constants.Window.headerHeight - HEADER_MIN_HEIGHT;
 const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
 
-class ProductList extends PureComponent {
+class ProductList extends Component {
   state = {scrollY: new Animated.Value(0)};
 
   constructor(props) {

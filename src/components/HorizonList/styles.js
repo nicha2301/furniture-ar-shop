@@ -16,8 +16,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
   },
   mainList: {
-    flexWrap: 'wrap',
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-between',
     paddingBottom: 20,
 

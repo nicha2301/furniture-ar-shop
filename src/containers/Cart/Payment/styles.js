@@ -9,12 +9,10 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     //backgroundColor: "white",
-    flexWrap: 'wrap',
   },
   paymentOption: {
     marginTop: 40,
     flexDirection: 'row',
-    flexWrap: 'wrap',
     justifyContent: 'center',
   },
   optionContainer: {

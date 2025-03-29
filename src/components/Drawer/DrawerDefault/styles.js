@@ -19,7 +19,6 @@ export default StyleSheet.create({
     paddingLeft: 40,
     backgroundColor: '#FFF',
     marginBottom: 20,
-    flexWrap: 'wrap',
   },
   avatar: {
     height: Styles.width / 5,

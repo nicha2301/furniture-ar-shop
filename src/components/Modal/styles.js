@@ -124,7 +124,6 @@ export default StyleSheet.create({
   layoutBox: {
     flex: 1,
     flexDirection: 'row',
-    flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 20,

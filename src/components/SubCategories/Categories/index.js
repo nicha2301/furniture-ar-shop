@@ -18,7 +18,7 @@ class Categories extends PureComponent {
           {categories.map((item, index) => (
             <Item
               item={item}
-              key={index}
+              key={`category_${item.id}`}
               selected={index == selectedIndex}
               onPress={() => onPress(index)}
             />

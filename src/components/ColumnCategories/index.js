@@ -26,6 +26,7 @@ class Categories extends PureComponent {
         data={cates}
         renderItem={this.renderItem}
         numColumns={2}
+        keyExtractor={(item) => `category_column_${item.id}`}
         contentContainerStyle={[styles.list, {backgroundColor: background}]}
       />
     );

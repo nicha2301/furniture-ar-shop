@@ -4,15 +4,15 @@ import Images from './Images';
 import Constants from './Constants';
 import Icons from './Icons';
 
-const consumerKey = 'ck_4c5dea07e73878ceb71699f6e44a46daee5b19ba';
-const consumerSecret = 'cs_f3febffaafcddd76597641d740957f4b0b7673ee';
+const consumerKey = 'ck_537b84f209530b60138c4d3e4316365b7713280b';
+const consumerSecret = 'cs_566924916a9162a3eb5f0f740041c45176fe68dd';
 
 export default {
   /**
    * Step 1: change to your website URL and the wooCommerce API consumeKey
    */
   WooCommerce: {
-    url: 'https://demo.mstore.io/',
+    url: 'http://192.168.1.166/wordpress/',
     consumerKey,
     consumerSecret,
   },

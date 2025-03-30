@@ -187,9 +187,9 @@ export default class Tools {
    */
   static getAvatar = user => {
     if (user) {
-      if (user.avatar_url) {
+      if (user.avatar) {
         return {
-          uri: user.avatar_url,
+          uri: user.avatar,
         };
       } else if (user.picture) {
         return {

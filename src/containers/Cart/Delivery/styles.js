@@ -84,7 +84,6 @@ export default StyleSheet.create({
   shippingMethod: {
     justifyContent: 'center',
     flexDirection: 'row',
-    flexWrap: 'wrap',
     marginBottom: 20,
   },
   shippingDesc: {

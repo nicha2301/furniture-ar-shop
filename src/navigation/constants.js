@@ -43,13 +43,13 @@ export const ROUTER = {
 
   // Tab
   HOME_STACK: 'Default',
-  CATEGORY_STACK: 'CategoriesScreen',
-  SEARCH_STACK: 'Search',
-  CART_STACK: 'CartScreen',
-  WISHLIST_STACK: 'WishListScreen',
-  USER_PROFILE_STACK: 'UserProfileScreen',
-  MY_ORDERS_STACK: 'MyOrders',
-  NEWS_STACK: 'NewsScreen',
+  CATEGORY_STACK: 'CategoryStack',
+  SEARCH_STACK: 'SearchStack',
+  CART_STACK: 'CartStack',
+  WISHLIST_STACK: 'WishListStack',
+  USER_PROFILE_STACK: 'UserProfileStack',
+  MY_ORDERS_STACK: 'MyOrdersStack',
+  NEWS_STACK: 'NewsStack',
   LOGIN_STACK: 'LoginStack',
   CATEGORY_DETAIL_STACK: 'CategoryDetail',
 

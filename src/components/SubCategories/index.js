@@ -44,6 +44,7 @@ class SubCategories extends PureComponent {
               data={products}
               numColumns={2}
               renderItem={this.renderItem}
+              keyExtractor={(item, index) => `product_${item.id}_${index}`}
             />
           )}
         </View>

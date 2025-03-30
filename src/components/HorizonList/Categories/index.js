@@ -19,7 +19,7 @@ class Categories extends PureComponent {
 
     return (
       <FlatList
-        keyExtractor={(item, index) => `${index}`}
+        keyExtractor={(item, index) => `horizon_category_${item.category || item.id || index}`}
         contentContainerStyle={styles.flatlist}
         showsHorizontalScrollIndicator={false}
         horizontal={column === 1}
@@ -27,7 +27,6 @@ class Categories extends PureComponent {
         data={items}
         renderItem={({ item, index }) => (
           <Item
-            key={index}
             item={item}
             type={type}
             label={item.label}

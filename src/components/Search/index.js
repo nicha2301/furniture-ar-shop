@@ -119,7 +119,7 @@ class Search extends PureComponent {
               <FlatButton
                 name="arrow-down"
                 text={isFetching ? 'LOADING...' : 'MORE'}
-                load={this.nextPosts}
+                load={this.nextPosts ? this.nextPosts : () => {}}
               />
             </View>
           ) : null;
@@ -203,6 +203,18 @@ const mapStateToProps = ({products}) => ({
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
   const {dispatch} = dispatchProps;
   const {actions} = require('@redux/ProductRedux');
+  
+  if (!actions) {
+    return {
+      ...ownProps,
+      ...stateProps,
+      fetchProductsByName: () => {},
+      saveSearchHistory: () => {},
+      clearSearchHistory: () => {},
+      filterProducts: () => {},
+    };
+  }
+  
   return {
     ...ownProps,
     ...stateProps,

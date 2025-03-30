@@ -13,7 +13,6 @@ export default StyleSheet.create({
   avatarBackground: {
     flexDirection: 'row',
     backgroundColor: '#FFF',
-    flexWrap: 'wrap',
     padding: 30,
     paddingBottom: 10,
     paddingTop: 50,

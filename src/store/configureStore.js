@@ -5,7 +5,7 @@ import thunk from 'redux-thunk';
 
 import reducers from '@redux';
 import {Constants} from '@common';
-import {connectConsoleToReactotron} from '@app/Omni';
+import {connectConsoleToReactotron} from '@app/utils/ReactotronConfig';
 import './../../ReactotronConfig';
 
 const middleware = [

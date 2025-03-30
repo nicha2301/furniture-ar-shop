@@ -69,7 +69,6 @@ export default StyleSheet.create({
   productSizeContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
-    flexWrap: 'wrap',
     marginTop: 15,
   },
   productSize: {

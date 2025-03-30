@@ -18,61 +18,68 @@ import Router from './src/Router';
 enableScreens();
 
 export default class ReduxWrapper extends Component {
+  state = {
+    requiresPrivacyConsent: false,
+    isSubscribed: false
+  };
+
   async componentDidMount() {
-    const notification = await getNotification();
+    try {
+      const notification = await getNotification();
 
-    if (notification) {
-      OneSignal.setAppId(Config.OneSignal.appId);
+      if (notification && Config.OneSignal && Config.OneSignal.appId) {
+        OneSignal.setAppId(Config.OneSignal.appId);
 
-      OneSignal.setLogLevel(6, 0);
+        OneSignal.setLogLevel(6, 0);
 
-      OneSignal.setLogLevel(6, 0);
-      OneSignal.setRequiresUserPrivacyConsent(
-        this.state.requiresPrivacyConsent,
-      );
+        // Đặt giá trị mặc định cho requiresPrivacyConsent
+        OneSignal.setRequiresUserPrivacyConsent(false);
 
-      /* O N E S I G N A L  H A N D L E R S */
-      OneSignal.setNotificationWillShowInForegroundHandler(
-        notifReceivedEvent => {
-          this.OSLog(
-            'OneSignal: notification will show in foreground:',
-            notifReceivedEvent,
-          );
-        },
-      );
-      OneSignal.setNotificationOpenedHandler(notification => {
-        this.OSLog('OneSignal: notification opened:', notification);
-      });
-      OneSignal.setInAppMessageClickHandler(event => {
-        this.OSLog('OneSignal IAM clicked:', event);
-      });
-      OneSignal.setInAppMessageLifecycleHandler({
-        onWillDisplayInAppMessage: message => {
-          this.OSLog('OneSignal: will display IAM: ', message.messageId);
-        },
-        onDidDisplayInAppMessage: message => {
-          this.OSLog('OneSignal: did display IAM: ', message.messageId);
-        },
-        onWillDismissInAppMessage: message => {
-          this.OSLog('OneSignal: will dismiss IAM: ', message.messageId);
-        },
-        onDidDismissInAppMessage: message => {
-          this.OSLog('OneSignal: did dismiss IAM: ', message.messageId);
-        },
-      });
-      OneSignal.addEmailSubscriptionObserver(event => {
-        this.OSLog('OneSignal: email subscription changed: ', event);
-      });
-      OneSignal.addSMSSubscriptionObserver(event => {
-        this.OSLog('OneSignal: SMS subscription changed: ', event);
-      });
-      OneSignal.addSubscriptionObserver(event => {
-        this.OSLog('OneSignal: subscription changed:', event);
-        this.setState({isSubscribed: event.to.isSubscribed});
-      });
-      OneSignal.addPermissionObserver(event => {
-        this.OSLog('OneSignal: permission changed:', event);
-      });
+        /* O N E S I G N A L  H A N D L E R S */
+        OneSignal.setNotificationWillShowInForegroundHandler(
+          notifReceivedEvent => {
+            this.OSLog(
+              'OneSignal: notification will show in foreground:',
+              notifReceivedEvent,
+            );
+          },
+        );
+        OneSignal.setNotificationOpenedHandler(notification => {
+          this.OSLog('OneSignal: notification opened:', notification);
+        });
+        OneSignal.setInAppMessageClickHandler(event => {
+          this.OSLog('OneSignal IAM clicked:', event);
+        });
+        OneSignal.setInAppMessageLifecycleHandler({
+          onWillDisplayInAppMessage: message => {
+            this.OSLog('OneSignal: will display IAM: ', message.messageId);
+          },
+          onDidDisplayInAppMessage: message => {
+            this.OSLog('OneSignal: did display IAM: ', message.messageId);
+          },
+          onWillDismissInAppMessage: message => {
+            this.OSLog('OneSignal: will dismiss IAM: ', message.messageId);
+          },
+          onDidDismissInAppMessage: message => {
+            this.OSLog('OneSignal: did dismiss IAM: ', message.messageId);
+          },
+        });
+        OneSignal.addEmailSubscriptionObserver(event => {
+          this.OSLog('OneSignal: email subscription changed: ', event);
+        });
+        OneSignal.addSMSSubscriptionObserver(event => {
+          this.OSLog('OneSignal: SMS subscription changed: ', event);
+        });
+        OneSignal.addSubscriptionObserver(event => {
+          this.OSLog('OneSignal: subscription changed:', event);
+          this.setState({isSubscribed: event.to.isSubscribed});
+        });
+        OneSignal.addPermissionObserver(event => {
+          this.OSLog('OneSignal: permission changed:', event);
+        });
+      }
+    } catch (error) {
+      console.log('OneSignal setup error:', error);
     }
   }
 

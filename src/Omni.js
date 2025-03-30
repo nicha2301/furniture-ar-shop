@@ -1,19 +1,25 @@
 /** @format */
 
-import reactotron from 'reactotron-react-native';
 import { PixelRatio, DeviceEventEmitter } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import _Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import _IconIO from 'react-native-vector-icons/Ionicons';
 import _Timer from 'react-timer-mixin';
 
-import store from '@store/configureStore';
 import { Images, Constants, Config } from '@common';
 import _Validate from './utils/Validate';
 import _BlockTimer from './utils/BlockTimer';
 import _FacebookAPI from './services/FacebookAPI';
+import { log, warn, error, Reactotron } from './utils/ReactotronConfig';
 
-// const { actions: SideMenuActions } = require('@redux/SideMenuRedux')
+// Import store lazily to avoid circular dependency
+let store = null;
+const getStore = () => {
+  if (store === null) {
+    store = require('@store/configureStore').default;
+  }
+  return store;
+};
 
 export const Icon = _Icon;
 export const IconIO = _IconIO;
@@ -22,19 +28,10 @@ export const Timer = _Timer;
 export const Validate = _Validate;
 export const BlockTimer = _BlockTimer;
 export const FacebookAPI = _FacebookAPI;
-export const Reactotron = reactotron;
 
-const _log = values => __DEV__ && reactotron.log(values);
-const _warn = values => __DEV__ && reactotron.warn(values);
-const _error = values => __DEV__ && reactotron.error(values);
-export function connectConsoleToReactotron() {
-  // console.log = _log;
-  // console.warn = _warn;
-  // console.error = _error;
-}
-export const log = _log;
-export const warn = _warn;
-export const error = _error;
+// Re-export from ReactotronConfig
+export { log, warn, error, Reactotron };
+export { connectConsoleToReactotron } from './utils/ReactotronConfig';
 
 /**
  * An async fetch with error catch
@@ -44,32 +41,35 @@ export const error = _error;
  */
 export const request = async (url, data = {}) => {
   try {
-    _warn(url);
+    warn(url);
     const response = await fetch(url, data);
-    _warn(response);
+    warn(response);
     return await response.json();
   } catch (err) {
-    _error(err);
+    error(err);
     return { error: err };
   }
 };
 
 // Drawer
-export const openDrawer = () =>
+export const openDrawer = () => {
   // EventEmitter.emit(Constants.EmitCode.SideMenuOpen)
-  store.dispatch({
+  getStore().dispatch({
     type: Constants.EmitCode.SideMenuOpen,
   });
-export const closeDrawer = () =>
+};
+export const closeDrawer = () => {
   // EventEmitter.emit(Constants.EmitCode.SideMenuClose)
-  store.dispatch({
+  getStore().dispatch({
     type: Constants.EmitCode.SideMenuClose,
   });
-export const toggleDrawer = () =>
+};
+export const toggleDrawer = () => {
   // EventEmitter.emit(Constants.EmitCode.SideMenuClose)
-  store.dispatch({
+  getStore().dispatch({
     type: Constants.EmitCode.SideMenuToggle,
   });
+};
 
 /**
  * Display the message toast-like (work both with Android and iOS)

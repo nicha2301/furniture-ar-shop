@@ -62,4 +62,7 @@ export const ROUTER = {
   ROOT: 'RootNavigator',
 
   DETAIL: 'DetailScreen',
+  
+  // AR
+  AR_VIEW: 'ARView',
 };

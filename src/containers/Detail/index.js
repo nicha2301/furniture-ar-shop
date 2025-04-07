@@ -632,6 +632,13 @@ class Detail extends PureComponent {
               }
             />
           )}
+          <Button
+            type="image"
+            source={require('@images/icons/icon-ar.png')}
+            imageStyle={[styles.imageButton, {tintColor: text}]}
+            buttonStyle={styles.buttonStyle}
+            onPress={() => this.navigateToAR()}
+          />
         </View>
         <Button
           text={!outOfStock ? Languages.BUYNOW : Languages.OutOfStock}
@@ -768,6 +775,13 @@ class Detail extends PureComponent {
       </View>
     );
   }
+
+  navigateToAR = () => {
+    const {navigation} = this.props;
+    navigation.navigate('ARView', {
+      onBackToHome: () => navigation.goBack(),
+    });
+  };
 }
 
 const mapStateToProps = state => {

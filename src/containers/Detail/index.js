@@ -778,9 +778,7 @@ class Detail extends PureComponent {
 
   navigateToAR = () => {
     const {navigation} = this.props;
-    navigation.navigate('ARView', {
-      onBackToHome: () => navigation.goBack(),
-    });
+    navigation.navigate('ARView');
   };
 }
 

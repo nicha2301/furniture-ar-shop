@@ -11,6 +11,7 @@ import {
   ViroSpotLight,
   ViroNode,
   ViroQuad,
+  ViroBox,
 } from "@reactvision/react-viro";
 
 // Khởi tạo vật liệu với nhiều màu
@@ -33,32 +34,64 @@ ViroMaterials.createMaterials({
 const ARScene = (props) => {
   const { modelScale, productColor, rotation, onLoadStart, onLoadEnd, onError } = props;
   const finalProductScale = [modelScale * 0.4, modelScale * 0.4, modelScale * 0.4];
+  const [modelLoaded, setModelLoaded] = React.useState(false);
+  const [modelError, setModelError] = React.useState(false);
+
+  const handleLoadStart = () => {
+    setModelLoaded(false);
+    if (onLoadStart) onLoadStart();
+  };
+
+  const handleLoadEnd = () => {
+    setModelLoaded(true);
+    if (onLoadEnd) onLoadEnd();
+  };
+
+  const handleError = (error) => {
+    setModelError(true);
+    if (onError) onError(error);
+  };
 
   return (
     <ViroARScene>
       <ViroAmbientLight color="#ffffff" intensity={200} />
 
-      <ViroText
-        text="Đang tải mô hình 3D..."
-        scale={[0.3, 0.3, 0.3]}
-        position={[0, 0.5, -1]}
-        style={{ fontSize: 30, fontFamily: 'Arial', color: 'white', textAlignVertical: 'center', textAlign: 'center' }}
-      />
+      {!modelLoaded && !modelError && (
+        <ViroText
+          text="Đang tải mô hình 3D..."
+          scale={[0.3, 0.3, 0.3]}
+          position={[0, 0.5, -1]}
+          style={{ fontSize: 30, fontFamily: 'Arial', color: 'white', textAlignVertical: 'center', textAlign: 'center' }}
+        />
+      )}
 
       <ViroNode position={[0, -1.5, -2]} dragType="FixedToWorld" onDrag={() => { }}>
-        <Viro3DObject
-        //   source={require('@images/models/product.obj')} 
-        //   resources={[require('@images/models/product.mtl')]}
-          highAccuracyEvents={true}
-          position={[0, 0, 0]}
-          scale={finalProductScale}
-          rotation={[0, rotation, 0]}
-          type="OBJ"
-          materials={[productColor]}
-          onLoadStart={onLoadStart}
-          onLoadEnd={onLoadEnd}
-          onError={onError}
-        />
+        {!modelError ? (
+          <Viro3DObject
+            source={{ uri: 'https://github.com/viromedia/viro/blob/master/code-samples/js/ARCarDemo/res/tesla/object_car.obj' }}
+            resources={[{ uri: 'https://github.com/viromedia/viro/blob/master/code-samples/js/ARCarDemo/res/tesla/object_car.mtl' }]}
+            highAccuracyEvents={true}
+            position={[0, 0, 0]}
+            scale={finalProductScale}
+            rotation={[0, rotation, 0]}
+            type="OBJ"
+            materials={[productColor]}
+            onLoadStart={handleLoadStart}
+            onLoadEnd={handleLoadEnd}
+            onError={handleError}
+          />
+        ) : (
+          // Fallback khi model không tải được
+          <ViroBox
+            height={0.5}
+            width={0.5}
+            length={0.5}
+            scale={[modelScale, modelScale, modelScale]}
+            rotation={[0, rotation, 0]}
+            position={[0, 0, 0]}
+            materials={[productColor]}
+          />
+        )}
 
         <ViroSpotLight
           innerAngle={5}
@@ -87,7 +120,7 @@ const ARScene = (props) => {
 
 // Props cho ARView
 const ARView = (props) => {
-  const { onBackToHome } = props;
+  const { navigation } = props;
   const [modelScale, setModelScale] = React.useState(0.5);
   const [productColor, setProductColor] = React.useState('product_material_brown');
   const [showControls, setShowControls] = React.useState(false);
@@ -206,7 +239,7 @@ const ARView = (props) => {
         style={styles.arView}
       />
       <ControlPanel />
-      <TouchableOpacity style={styles.backButton} onPress={onBackToHome}>
+      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Text style={styles.backButtonText}>Quay lại</Text>
       </TouchableOpacity>
     </View>

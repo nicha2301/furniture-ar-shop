@@ -32,6 +32,9 @@ const ListItem = React.memo(
     const layout = useSelector(state => state.layouts.layout);
     const collections = useSelector(state => getCollections(state));
 
+    // Đảm bảo list là một array
+    const categoryList = Array.isArray(list) ? list : [];
+
     const setSelectedCategory = React.useCallback(
       cate => {
         dispatch(CategoryRedux.actions.setSelectedCategory(cate));
@@ -74,7 +77,7 @@ const ListItem = React.memo(
         config={item}
         index={index}
         collection={collections[index]}
-        list={list}
+        list={categoryList}
         news={news}
         fetchPost={_fetchPost}
         fetchNews={fetchNews}

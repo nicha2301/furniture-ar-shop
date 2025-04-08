@@ -25,6 +25,7 @@ import UserProfileScreen from './UserProfileScreen';
 import FiltersScreen from './FiltersScreen';
 import AddressScreen from './AddressScreen';
 import AddAddressScreen from './AddAddressScreen';
+import ARView from '@containers/ARView';
 
 // import TransitionConfig from "./TransitionConfig";
 import {getNavigationOptions} from './utils';
@@ -267,6 +268,14 @@ const MainNavigator = () => {
           }}
         />
       )}
+      <MainBottomTab.Screen
+        name={ROUTER.AR_VIEW}
+        component={ARView}
+        options={{
+          tabBarButton: () => null,
+          tabBarVisible: false,
+        }}
+      />
     </MainBottomTab.Navigator>
   );
 };

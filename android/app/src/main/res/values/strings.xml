@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">MStore v2</string>
-    <string name="facebook_app_id">1083362056889909</string>
-    <string name="facebook_client_token">427e3fca26a20469b2c882bd787a362b</string>
-    <string name="fb_login_protocol_scheme">fb1083362056889909</string>
-</resources>

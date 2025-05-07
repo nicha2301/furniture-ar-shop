@@ -20,7 +20,7 @@ android {
     compileSdkVersion 33
     defaultConfig {
         applicationId "com.nicha.furnier"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 33
         versionCode 23
         versionName "11.1.0"
@@ -58,6 +58,8 @@ android {
     lintOptions {
         abortOnError false
     }
+    namespace 'com.nicha.furnier'
+    
 }
 
 dependencies {
@@ -108,4 +110,8 @@ dependencies {
     implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
     implementation 'com.facebook.android:facebook-login:4.42.0'
     implementation 'com.google.android.gms:play-services-auth:20.3.0'
+
+    implementation 'io.github.sceneview:arsceneview:0.9.9'
+    implementation 'com.google.ar:core:1.48.0'
+    implementation 'com.airbnb.android:lottie:6.3.0'
 }

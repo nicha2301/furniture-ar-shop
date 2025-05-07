@@ -166,6 +166,10 @@ class StoreProductModel : Serializable {
     @Expose
     var taxClass: String? = null
 
+    @SerializedName("model_url")
+    @Expose
+    var modelUrl: String? = null
+
     @SerializedName("manage_stock")
     @Expose
     var manageStock: Boolean? = null

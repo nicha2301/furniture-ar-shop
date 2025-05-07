@@ -167,6 +167,16 @@ open class AppBaseActivity : AppCompatActivity() {
         }
     }
 
+    fun hideProgress() {
+        try {
+            if (progressDialog != null && progressDialog!!.isShowing && !isFinishing) {
+                progressDialog!!.dismiss()
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
     override fun onStart() {
         Log.d("onStart", "called")
         super.onStart()
@@ -178,6 +188,11 @@ open class AppBaseActivity : AppCompatActivity() {
         if (themeApp != 0 && themeApp != appTheme) {
             launchActivityWithNewTask<DashBoardActivity>()
         }
+    }
+
+    override fun onDestroy() {
+        hideProgress()
+        super.onDestroy()
     }
 
 }

@@ -109,6 +109,7 @@ object Constants {
         const val SHIPPING="SHIPPING"
         const val DISCOUNT_MRP="DISCOUNT_MRP"
         const val ORDER_DATA = "orderData"
+        const val MODEL_URL = "model_url"
         const val VIEWALLID = "viewallid"
         const val SPECIAL_PRODUCT_KEY = "special_product_key"
         const val IS_BANNER = "is_banner"
@@ -174,5 +175,14 @@ object Constants {
         const val VIEW_OFFER = "offer"
         const val VIEW_SUGGESTED_FOR_YOU = "suggested_for_you"
         const val VIEW_YOU_MAY_LIKE = "you_may_like"
+    }
+
+     object ControlPara {
+        const val SCAN_CHECK_INTERVAL_MS = 500L
+        const val COLOR_ANIMATION_DURATION_MS = 300L
+        const val GESTURE_OVERLAY_DURATION_MS = 3000L
+        const val ZOOM_OVERLAY_DURATION_MS = 5000L
+        const val MIN_SCALE = 0.2f
+        const val MAX_SCALE = 3.0f
     }
 }

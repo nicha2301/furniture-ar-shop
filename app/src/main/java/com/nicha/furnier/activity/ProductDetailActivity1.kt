@@ -28,6 +28,7 @@ import com.nicha.furnier.models.StoreUpSale
 import com.nicha.furnier.utils.Constants
 import com.nicha.furnier.utils.Constants.KeyIntent.DATA
 import com.nicha.furnier.utils.Constants.KeyIntent.EXTERNAL_URL
+import com.nicha.furnier.utils.Constants.KeyIntent.MODEL_URL
 import com.nicha.furnier.utils.Constants.KeyIntent.PRODUCT_ID
 import com.nicha.furnier.utils.Constants.viewAllCode.CATEGORY
 import com.nicha.furnier.utils.extensions.*
@@ -92,6 +93,7 @@ class ProductDetailActivity1 : AppBaseActivity() {
     private var mIsInWishList = false
     private var mIsExternalProduct = false
     private var mExternalURL: String = ""
+    private var mModelUrl: String = ""
     private var mAttributeAdapter: BaseAdapter<String>? = null
     private var mYearAdapter: ArrayAdapter<String>? = null
     private var mQuantity: String = "1"
@@ -350,6 +352,17 @@ class ProductDetailActivity1 : AppBaseActivity() {
                 tvName.text = it[0].name
                 toolbar_layout.title = it[0].name
                 tvItemProductRating.rating = it[0].averageRating!!.toFloat()
+
+                ivAR.onClick {
+                    if (it[0].modelUrl.isNullOrBlank() || it[0].modelUrl == "") {
+                        toast(R.string.error_no_ar_model)
+                    } else {
+                        launchActivity<ARViewActivity> {
+                            putExtra(MODEL_URL, it[0].modelUrl)
+                            putExtra(PRODUCT_ID, mPId)
+                        }
+                    }
+                }
 
 
                 /**

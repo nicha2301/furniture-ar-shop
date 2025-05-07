@@ -319,6 +319,7 @@
     <string name="lbl_flat">Flat\u0020</string>
     <string name="lbl_change_your_pwd">Change your password</string>
     <string name="lbl_light_mode">Light Mode</string>
+    <string name="lbl_place_model">Place Model</string>
 
     <string-array name="qty_array">
         <item>1</item>
@@ -374,4 +375,25 @@
     <string name="lbl_select_image">Select Image</string>
     <string name="notification">Notification</string>
     <string name="lbl_tap_to_retry">Tap to Retry</string>
+    <string name="ar_installation_required" translatable="false">AR installation required</string>
+    <string name="ar_not_supported" translatable="false">AR not supported</string>
+    <string name="no_3d_model" translatable="false">no 3d model</string>
+    <string name="error_no_ar_model" translatable="false">The model for the current product is not available </string>
+    <string name="error_load_model" translatable="false">Unable to load 3D model: %1$s</string>
+    <string name="error_invalid_color" translatable="false">Invalid color code</string>
+    <string name="error_camera_slow" translatable="false">Please move your camera slowly to find a flat surface</string>
+    <string name="error_not_tracking" translatable="false">Unable to track the environment. Please move your camera more slowly.</string>
+    <string name="ar_model_loaded" translatable="false">3D model loaded successfully</string>
+    <string name="step_scanning" translatable="false">Move your phone to find a flat surface</string>
+    <string name="step_rotate" translatable="false">Use two fingers to rotate the model</string>
+    <string name="step_zoom" translatable="false">Use two fingers to zoom in and out</string>
+    <string name="color_reset" translatable="false">RESET</string>
+    <string name="color_red" translatable="false">#FF0000</string>
+    <string name="color_green" translatable="false">#00FF00</string>
+    <string name="color_blue" translatable="false">#0000FF</string>
+    <string name="color_yellow" translatable="false">#FFFF00</string>
+    <string name="color_magenta" translatable="false">#FF00FF</string>
+    <string name="color_cyan" translatable="false">#00FFFF</string>
+    <string name="color_white" translatable="false">#FFFFFF</string>
+    <string name="color_black" translatable="false">#000000</string>
 </resources>

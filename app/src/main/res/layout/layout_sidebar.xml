@@ -117,6 +117,13 @@
             android:text="@string/lbl_about" />
 
         <TextView
+            android:id="@+id/tvInteriorDesign"
+            style="@style/SidebarLabel.SidebarOption"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/ic_chair"
+            android:text="@string/title_interior_design" />
+
+        <TextView
             android:id="@+id/tvSettings"
             style="@style/SidebarLabel.SidebarOption"
             android:gravity="center_vertical"

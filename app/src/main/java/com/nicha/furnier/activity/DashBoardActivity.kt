@@ -203,6 +203,11 @@ class DashBoardActivity : AppBaseActivity() {
 
         }
         tvAbout.onClick { launchActivity<AboutActivity>(); closeDrawer() }
+        
+        tvInteriorDesign.onClick { 
+            launchActivity<InteriorDesignActivity>()
+            closeDrawer() 
+        }
 
         tvChangePwd.onClick {
             when {

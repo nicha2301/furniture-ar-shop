@@ -167,6 +167,12 @@
             android:name="com.nicha.furnier.activity.ARViewActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
             />
+        <activity
+            android:name="com.nicha.furnier.activity.InteriorDesignActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nicha.furnier.activity.VirtualRoomActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

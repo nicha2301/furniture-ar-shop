@@ -71,6 +71,7 @@
     <color name="cat_8">#D95362</color>
 
     <color name="cardBackground">#FFF</color>
+    <color name="card_stroke_color">#DDDDDD</color>
 
     <color name="faceBooK_blue">#343B9D</color>
     <color name="google_red">#CB3634</color>

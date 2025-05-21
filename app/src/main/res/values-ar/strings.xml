@@ -337,5 +337,53 @@
     <string name="lbl_select_image">اختر صورة</string>
     <string name="notification">تنبيه</string>
     <string name="lbl_tap_to_retry">إضغط لإعادة المحاولة</string>
+    <string name="lbl_place_model">وضع النموذج</string>
 
+    <!-- Interior Design -->
+    <string name="title_interior_design">التصميم الداخلي</string>
+    <string name="warning_items_without_models">تحذير: %1$d عناصر ليس لديها نماذج ثلاثية الأبعاد</string>
+    <string name="error_no_categories">لا توجد فئات متاحة</string>
+    <string name="error_no_products_in_category">لا توجد منتجات في الفئة %1$s</string>
+    <string name="error_no_furniture_selected">الرجاء تحديد قطعة أثاث واحدة على الأقل</string>
+    <string name="selected_items_count">العناصر المحددة: %1$d</string>
+    
+    <string name="furniture_categories">فئات الأثاث</string>
+    <string name="view_virtual_room">عرض الغرفة الافتراضية</string>
+    <string name="title_virtual_room">الغرفة الافتراضية</string>
+    <string name="reset_view">إعادة تعيين العرض</string>
+    <string name="capture_screenshot">التقاط لقطة شاشة</string>
+    <string name="expand_collapse">توسيع أو طي</string>
+    <string name="selected_furniture">الأثاث المحدد</string>
+    <string name="furniture_thumbnail">صورة مصغرة للأثاث</string>
+    <string name="focus_on_item">التركيز على العنصر</string>
+    <string name="furniture_category_icon">أيقونة فئة الأثاث</string>
+    <string name="furniture_image">صورة الأثاث</string>
+    <string name="selected_indicator">مؤشر محدد</string>
+    <string name="screenshot_failed">فشل التقاط لقطة الشاشة</string>
+    <string name="no_furniture_available">لا يوجد أثاث متاح بنماذج ثلاثية الأبعاد</string>
+    
+    <!-- Furniture Categories -->
+    <string name="category_beds">أسرّة</string>
+    <string name="category_sofas">أرائك</string>
+    <string name="category_tables">طاولات</string>
+    <string name="category_chairs">كراسي</string>
+    <string name="category_cabinets">خزائن</string>
+    <string name="category_lamps">مصابيح</string>
+    <string name="category_other">أخرى</string>
+    <string name="category_dining_tables">طاولات طعام</string>
+    <string name="category_dining_chairs">كراسي طعام</string>
+    <string name="category_vases">مزهريات</string>
+    <string name="category_shelves">رفوف</string>
+    <string name="floor">أرضية</string>
+    <string name="floor_changed">أرضية %1$d</string>
+
+    <!-- Virtual Room strings -->
+    <string name="error_init_3d_view">لا يمكن تهيئة العرض ثلاثي الأبعاد: %1$s</string>
+    <string name="room_loaded_loading_furniture">تم تحميل الغرفة. جاري تحميل الأثاث...</string>
+    <string name="error_loading_room_model">خطأ في تحميل نموذج الغرفة: %1$s</string>
+    <string name="error_loading_furniture_models">خطأ في تحميل نماذج الأثاث: %1$s</string>
+    <string name="viewing_furniture">عرض: %1$s</string>
+    <string name="error_loading_room">لا يمكن تحميل نموذج الغرفة</string>
+    <string name="error_loading_furniture">لا يمكن تحميل %1$s</string>
+    <string name="screenshot_captured">تم حفظ لقطة الشاشة</string>
 </resources>

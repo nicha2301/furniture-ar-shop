@@ -337,5 +337,54 @@
     <string name="lbl_select_image">Bild auswählen</string>
     <string name="notification">Benachrichtigung</string>
     <string name="lbl_tap_to_retry">Zum Wiederholen tippen</string>
+    <string name="lbl_place_model">Modell platzieren</string>
+    
+    <!-- Interior Design -->
+    <string name="title_interior_design">Innenarchitektur</string>
+    <string name="warning_items_without_models">Warnung: %1$d Artikel haben keine 3D-Modelle</string>
+    <string name="error_no_categories">Keine Kategorien verfügbar</string>
+    <string name="error_no_products_in_category">Keine Produkte in der Kategorie %1$s</string>
+    <string name="error_no_furniture_selected">Bitte wählen Sie mindestens ein Möbelstück aus</string>
+    <string name="selected_items_count">Ausgewählte Artikel: %1$d</string>
+    
+    <string name="furniture_categories">Möbelkategorien</string>
+    <string name="view_virtual_room">Virtuellen Raum anzeigen</string>
+    <string name="title_virtual_room">Virtueller Raum</string>
+    <string name="reset_view">Ansicht zurücksetzen</string>
+    <string name="capture_screenshot">Screenshot aufnehmen</string>
+    <string name="expand_collapse">Erweitern oder reduzieren</string>
+    <string name="selected_furniture">Ausgewählte Möbel</string>
+    <string name="furniture_thumbnail">Möbel-Miniaturansicht</string>
+    <string name="focus_on_item">Auf Artikel fokussieren</string>
+    <string name="furniture_category_icon">Möbelkategorie-Symbol</string>
+    <string name="furniture_image">Möbelbild</string>
+    <string name="selected_indicator">Ausgewählter Indikator</string>
+    <string name="screenshot_failed">Screenshot fehlgeschlagen</string>
+    <string name="no_furniture_available">Keine Möbel mit 3D-Modellen verfügbar</string>
+    
+    <!-- Furniture Categories -->
+    <string name="category_beds">Betten</string>
+    <string name="category_sofas">Sofas</string>
+    <string name="category_tables">Tische</string>
+    <string name="category_chairs">Stühle</string>
+    <string name="category_cabinets">Schränke</string>
+    <string name="category_lamps">Lampen</string>
+    <string name="category_other">Andere</string>
+    <string name="category_dining_tables">Esstische</string>
+    <string name="category_dining_chairs">Esszimmerstühle</string>
+    <string name="category_vases">Blumenvasen</string>
+    <string name="category_shelves">Regale</string>
+    <string name="floor">Boden</string>
+    <string name="floor_changed">Boden %1$d</string>
+
+    <!-- Virtual Room strings -->
+    <string name="error_init_3d_view">3D-Ansicht kann nicht initialisiert werden: %1$s</string>
+    <string name="room_loaded_loading_furniture">Raum geladen. Laden von Möbeln...</string>
+    <string name="error_loading_room_model">Fehler beim Laden des Raummodells: %1$s</string>
+    <string name="error_loading_furniture_models">Fehler beim Laden von Möbelmodellen: %1$s</string>
+    <string name="viewing_furniture">Ansicht: %1$s</string>
+    <string name="error_loading_room">Raummodell kann nicht geladen werden</string>
+    <string name="error_loading_furniture">%1$s kann nicht geladen werden</string>
+    <string name="screenshot_captured">Screenshot gespeichert</string>
 </resources>
 

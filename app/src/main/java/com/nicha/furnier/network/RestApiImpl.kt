@@ -30,10 +30,11 @@ class RestApiImpl(s: String) {
     }
 
     fun listAllProducts(
+        options: Map<String, Int> = emptyMap(),
         onApiSuccess: (ArrayList<StoreProductModel>) -> Unit,
         onApiError: (aError: String) -> Unit,
     ) {
-        getRestApis.listAllProducts().enqueue(object : Callback<ArrayList<StoreProductModel>> {
+        getRestApis.listAllProducts(options).enqueue(object : Callback<ArrayList<StoreProductModel>> {
             override fun onResponse(
                 call: Call<ArrayList<StoreProductModel>>,
                 response: Response<ArrayList<StoreProductModel>>,

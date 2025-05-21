@@ -337,5 +337,52 @@
     <string name="lbl_select_image">Kies Beeld</string>
     <string name="notification">kennisgewing</string>
     <string name="lbl_tap_to_retry">Tik om weer te probeer</string>
+    <string name="lbl_place_model">Plaas Model</string>
 
+    <!-- Interior Design Feature -->
+    <string name="warning_items_without_models">Waarskuwing: %1$d items het nie 3D-modelle nie</string>
+    <string name="error_no_categories">Geen kategorieë beskikbaar nie</string>
+    <string name="error_no_products_in_category">Geen produkte in die kategorie %1$s nie</string>
+    <string name="title_interior_design">Interieurontwerp</string>
+    <string name="furniture_categories">Meubel Kategorieë</string>
+    <string name="selected_items_count">Geselekteerde Items: %1$d</string>
+    <string name="view_virtual_room">Bekyk Virtuele Kamer</string>
+    <string name="error_no_furniture_selected">Kies asseblief ten minste een meubelstuk</string>
+    <string name="title_virtual_room">Virtuele Kamer</string>
+    <string name="reset_view">Herstel Aansig</string>
+    <string name="capture_screenshot">Neem Skermkiekie</string>
+    <string name="expand_collapse">Uitbrei of Invou</string>
+    <string name="selected_furniture">Geselekteerde Meubels</string>
+    <string name="furniture_thumbnail">Meubel Duimnaelskets</string>
+    <string name="focus_on_item">Fokus op Item</string>
+    <string name="furniture_category_icon">Meubel Kategorie Ikoon</string>
+    <string name="furniture_image">Meubel Beeld</string>
+    <string name="selected_indicator">Geselekteerde Aanwyser</string>
+    <string name="screenshot_failed">Skermkiekie het misluk</string>
+    <string name="no_furniture_available">Geen meubels met 3D-modelle beskikbaar nie</string>
+
+    <!-- Furniture Categories -->
+    <string name="category_beds">Beddens</string>
+    <string name="category_sofas">Sofas</string>
+    <string name="category_tables">Tafels</string>
+    <string name="category_chairs">Stoele</string>
+    <string name="category_cabinets">Kabinette</string>
+    <string name="category_lamps">Lampe</string>
+    <string name="category_other">Ander</string>
+    <string name="category_dining_tables">Eetkamertafels</string>
+    <string name="category_dining_chairs">Eetkamerstoele</string>
+    <string name="category_vases">Blomvase</string>
+    <string name="category_shelves">Rakke</string>
+    <string name="floor">Vloer</string>
+    <string name="floor_changed">Vloer %1$d</string>
+
+    <!-- Virtual Room strings -->
+    <string name="error_init_3d_view">Kan nie 3D-aansig inisialiseer nie: %1$s</string>
+    <string name="room_loaded_loading_furniture">Kamer gelaai. Besig om meubels te laai...</string>
+    <string name="error_loading_room_model">Fout met die laai van kamermodel: %1$s</string>
+    <string name="error_loading_furniture_models">Fout met die laai van meubelmodelle: %1$s</string>
+    <string name="viewing_furniture">Besigtig: %1$s</string>
+    <string name="error_loading_room">Kan nie kamermodel laai nie</string>
+    <string name="error_loading_furniture">Kan nie %1$s laai nie</string>
+    <string name="screenshot_captured">Skermkiekie gestoor</string>
 </resources>

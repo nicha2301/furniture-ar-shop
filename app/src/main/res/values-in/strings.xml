@@ -336,6 +336,53 @@
     <string name="lbl_cancel_msg">Alasan pembatalan pesanan</string>
     <string name="lbl_select_image">Pilih gambar</string>
     <string name="notification">Pemberitahuan</string>
-    <string name="lbl_tap_to_retry">Ketuk untuk Mencoba Lagi </string>
+    <string name="lbl_tap_to_retry">Ketuk untuk Coba Lagi</string>
+    <string name="lbl_place_model">Tempatkan Model</string>
 
+    <!-- Interior Design Feature -->
+    <string name="warning_items_without_models">Peringatan: %1$d produk tidak memiliki model 3D</string>
+    <string name="error_no_categories">Tidak ada kategori yang tersedia</string>
+    <string name="error_no_products_in_category">Tidak ada produk dalam kategori %1$s</string>
+    <string name="title_interior_design">Desain Interior</string>
+    <string name="furniture_categories">Kategori Furnitur</string>
+    <string name="selected_items_count">Item Dipilih: %1$d</string>
+    <string name="view_virtual_room">Lihat Ruang Virtual</string>
+    <string name="error_no_furniture_selected">Silakan pilih setidaknya satu item furnitur</string>
+    <string name="title_virtual_room">Ruang Virtual</string>
+    <string name="reset_view">Reset Tampilan</string>
+    <string name="capture_screenshot">Ambil Tangkapan Layar</string>
+    <string name="expand_collapse">Perluas atau Ciutkan</string>
+    <string name="selected_furniture">Furnitur Terpilih</string>
+    <string name="furniture_thumbnail">Thumbnail Furnitur</string>
+    <string name="focus_on_item">Fokus pada Item</string>
+    <string name="furniture_category_icon">Ikon Kategori Furnitur</string>
+    <string name="furniture_image">Gambar Furnitur</string>
+    <string name="selected_indicator">Indikator Terpilih</string>
+    <string name="screenshot_failed">Tangkapan layar gagal</string>
+    <string name="no_furniture_available">Tidak ada furnitur dengan model 3D tersedia</string>
+
+    <!-- Furniture Categories -->
+    <string name="category_beds">Tempat Tidur</string>
+    <string name="category_sofas">Sofa</string>
+    <string name="category_tables">Meja</string>
+    <string name="category_chairs">Kursi</string>
+    <string name="category_cabinets">Lemari</string>
+    <string name="category_lamps">Lampu</string>
+    <string name="category_other">Lainnya</string>
+    <string name="category_dining_tables">Meja Makan</string>
+    <string name="category_dining_chairs">Kursi Makan</string>
+    <string name="category_vases">Vas Bunga</string>
+    <string name="category_shelves">Rak</string>
+    <string name="floor">Lantai</string>
+    <string name="floor_changed">Lantai %1$d</string>
+
+    <!-- Virtual Room strings -->
+    <string name="error_init_3d_view">Tidak dapat menginisialisasi tampilan 3D: %1$s</string>
+    <string name="room_loaded_loading_furniture">Ruangan dimuat. Memuat furnitur...</string>
+    <string name="error_loading_room_model">Kesalahan saat memuat model ruangan: %1$s</string>
+    <string name="error_loading_furniture_models">Kesalahan saat memuat model furnitur: %1$s</string>
+    <string name="viewing_furniture">Melihat: %1$s</string>
+    <string name="error_loading_room">Tidak dapat memuat model ruangan</string>
+    <string name="error_loading_furniture">Tidak dapat memuat %1$s</string>
+    <string name="screenshot_captured">Tangkapan layar disimpan</string>
 </resources>

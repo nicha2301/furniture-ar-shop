@@ -319,7 +319,6 @@
     <string name="lbl_flat">Flat\u0020</string>
     <string name="lbl_change_your_pwd">Change your password</string>
     <string name="lbl_light_mode">Light Mode</string>
-    <string name="lbl_place_model">Place Model</string>
 
     <string-array name="qty_array">
         <item>1</item>
@@ -375,6 +374,7 @@
     <string name="lbl_select_image">Select Image</string>
     <string name="notification">Notification</string>
     <string name="lbl_tap_to_retry">Tap to Retry</string>
+    <string name="lbl_place_model">Place Model</string>
     <string name="ar_installation_required" translatable="false">AR installation required</string>
     <string name="ar_not_supported" translatable="false">AR not supported</string>
     <string name="no_3d_model" translatable="false">no 3d model</string>
@@ -396,4 +396,52 @@
     <string name="color_cyan" translatable="false">#00FFFF</string>
     <string name="color_white" translatable="false">#FFFFFF</string>
     <string name="color_black" translatable="false">#000000</string>
+
+    <!-- Interior Design Feature -->
+    <string name="title_interior_design">Interior Design</string>
+    <string name="warning_items_without_models">Warning: %1$d items don\'t have 3D models</string>
+    <string name="error_no_categories">No categories available</string>
+    <string name="error_no_products_in_category">No products in category %1$s</string>
+    <string name="furniture_categories">Furniture Categories</string>
+    <string name="selected_items_count">Selected Items: %1$d</string>
+    <string name="view_virtual_room">View Virtual Room</string>
+    <string name="error_no_furniture_selected">Please select at least one furniture item</string>
+    <string name="title_virtual_room">Virtual Room</string>
+    <string name="reset_view">Reset View</string>
+    <string name="capture_screenshot">Capture Screenshot</string>
+    <string name="expand_collapse">Expand or Collapse</string>
+    <string name="selected_furniture">Selected Furniture</string>
+    <string name="furniture_thumbnail">Furniture Thumbnail</string>
+    <string name="focus_on_item">Focus on Item</string>
+    <string name="furniture_category_icon">Furniture Category Icon</string>
+    <string name="furniture_image">Furniture Image</string>
+    <string name="selected_indicator">Selected Indicator</string>
+    <string name="screenshot_failed">Screenshot failed</string>
+    <string name="no_furniture_available">No furniture with 3D models available</string>
+
+
+    <!-- Furniture Categories -->
+    <string name="category_beds">Beds</string>
+    <string name="category_sofas">Sofas</string>
+    <string name="category_tables">Tables</string>
+    <string name="category_chairs">Chairs</string>
+    <string name="category_cabinets">Cabinets</string>
+    <string name="category_lamps">Lamps</string>
+    <string name="category_other">Other</string>
+    <string name="category_dining_tables">Dining Tables</string>
+    <string name="category_dining_chairs">Dining Chairs</string>
+    <string name="category_vases">Flower Vases</string>
+    <string name="category_shelves">Shelves</string>
+    <string name="floor">Floor</string>
+    <string name="floor_changed">Floor %1$d</string>
+
+    <!-- Virtual Room strings -->
+    <string name="error_init_3d_view">Unable to initialize 3D view: %1$s</string>
+    <string name="room_loaded_loading_furniture">Room loaded. Loading furniture...</string>
+    <string name="error_loading_room_model">Error loading room model: %1$s</string>
+    <string name="error_loading_furniture_models">Error loading furniture models: %1$s</string>
+    <string name="viewing_furniture">Viewing: %1$s</string>
+    <string name="error_loading_room">Unable to load room model</string>
+    <string name="error_loading_furniture">Unable to load %1$s</string>
+    <string name="screenshot_captured">Screenshot saved</string>
 </resources>

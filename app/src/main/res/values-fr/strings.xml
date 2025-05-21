@@ -324,7 +324,7 @@
     <string name="lbl_coupon_is_valid_only_orders_of1">et ci-dessus.  Essayez d\'autres coupon.</string>
     <string name="lbl_flat">Plat</string>
     <string name="lbl_change_your_pwd">changez votre mot de passe</string>
-    <string name="lbl_light_mode">mode Voyant</string>
+    <string name="lbl_light_mode">Mode lumineux</string>
     <string name="error_validText">Seules les lettres permettent</string>
     <string name="lbl_payment">Paiement</string>
     <string name="lbl_ex_product">produit externe</string>
@@ -337,5 +337,54 @@
     <string name="lbl_select_image">Sélectionnez une image</string>
     <string name="notification">Notification</string>
     <string name="lbl_tap_to_retry">Cliquer pour réessayer</string>
+    <string name="lbl_place_model">Placer le modèle</string>
+
+    <!-- Interior Design -->
+    <string name="title_interior_design">Design d\'Intérieur</string>
+    <string name="warning_items_without_models">Attention: %1$d articles n\'ont pas de modèles 3D</string>
+    <string name="error_no_categories">Aucune catégorie disponible</string>
+    <string name="error_no_products_in_category">Aucun produit dans la catégorie %1$s</string>
+    <string name="error_no_furniture_selected">Veuillez sélectionner au moins un meuble</string>
+    <string name="selected_items_count">Articles sélectionnés: %1$d</string>
+    
+    <string name="furniture_categories">Catégories de meubles</string>
+    <string name="view_virtual_room">Voir la pièce virtuelle</string>
+    <string name="title_virtual_room">Pièce virtuelle</string>
+    <string name="reset_view">Réinitialiser la vue</string>
+    <string name="capture_screenshot">Capture d\'écran</string>
+    <string name="expand_collapse">Développer ou réduire</string>
+    <string name="selected_furniture">Meubles sélectionnés</string>
+    <string name="furniture_thumbnail">Miniature du meuble</string>
+    <string name="focus_on_item">Focaliser sur l\'article</string>
+    <string name="furniture_category_icon">Icône de catégorie de meuble</string>
+    <string name="furniture_image">Image du meuble</string>
+    <string name="selected_indicator">Indicateur sélectionné</string>
+    <string name="screenshot_failed">Échec de la capture d\'écran</string>
+    <string name="no_furniture_available">Aucun meuble disponible avec des modèles 3D</string>
+    
+    <!-- Furniture Categories -->
+    <string name="category_beds">Lits</string>
+    <string name="category_sofas">Canapés</string>
+    <string name="category_tables">Tables</string>
+    <string name="category_chairs">Chaises</string>
+    <string name="category_cabinets">Armoires</string>
+    <string name="category_lamps">Lampes</string>
+    <string name="category_other">Autres</string>
+    <string name="category_dining_tables">Tables à manger</string>
+    <string name="category_dining_chairs">Chaises de salle à manger</string>
+    <string name="category_vases">Vases</string>
+    <string name="category_shelves">Étagères</string>
+    <string name="floor">Sol</string>
+    <string name="floor_changed">Sol %1$d</string>
+
+    <!-- Virtual Room strings -->
+    <string name="error_init_3d_view">Impossible d\'initialiser la vue 3D: %1$s</string>
+    <string name="room_loaded_loading_furniture">Pièce chargée. Chargement des meubles...</string>
+    <string name="error_loading_room_model">Erreur lors du chargement du modèle de pièce: %1$s</string>
+    <string name="error_loading_furniture_models">Erreur lors du chargement des modèles de meubles: %1$s</string>
+    <string name="viewing_furniture">Visualisation: %1$s</string>
+    <string name="error_loading_room">Impossible de charger le modèle de pièce</string>
+    <string name="error_loading_furniture">Impossible de charger %1$s</string>
+    <string name="screenshot_captured">Capture d\'écran enregistrée</string>
 
 </resources>

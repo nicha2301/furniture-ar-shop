@@ -337,4 +337,53 @@
     <string name="lbl_select_image">Chọn ảnh</string>
     <string name="notification">thông báo</string>
     <string name="lbl_tap_to_retry">Chạm để thử lại</string>
+    <string name="lbl_place_model">Đặt mô hình</string>
+    
+    <!-- Interior Design -->
+    <string name="title_interior_design">Thiết kế nội thất</string>
+    <string name="warning_items_without_models">Cảnh báo: %1$d sản phẩm không có model 3D</string>
+    <string name="error_no_categories">Không có danh mục nào</string>
+    <string name="error_no_products_in_category">Không có sản phẩm nào trong danh mục %1$s</string>
+    <string name="error_no_furniture_selected">Vui lòng chọn ít nhất một sản phẩm nội thất</string>
+    <string name="selected_items_count">Đã chọn: %1$d</string>
+    
+    <string name="furniture_categories">Danh mục nội thất</string>
+    <string name="view_virtual_room">Xem phòng ảo</string>
+    <string name="title_virtual_room">Phòng ảo</string>
+    <string name="reset_view">Đặt lại góc nhìn</string>
+    <string name="capture_screenshot">Chụp màn hình</string>
+    <string name="expand_collapse">Mở rộng hoặc thu gọn</string>
+    <string name="selected_furniture">Đồ nội thất đã chọn</string>
+    <string name="furniture_thumbnail">Hình thu nhỏ nội thất</string>
+    <string name="focus_on_item">Tập trung vào đồ vật</string>
+    <string name="furniture_category_icon">Biểu tượng danh mục nội thất</string>
+    <string name="furniture_image">Hình ảnh nội thất</string>
+    <string name="selected_indicator">Chỉ báo đã chọn</string>
+    <string name="screenshot_failed">Chụp màn hình thất bại</string>
+    <string name="no_furniture_available">Không có nội thất nào có sẵn mô hình 3D</string>
+    
+    <!-- Furniture Categories -->
+    <string name="category_beds">Giường</string>
+    <string name="category_sofas">Sofa</string>
+    <string name="category_tables">Bàn</string>
+    <string name="category_chairs">Ghế</string>
+    <string name="category_cabinets">Tủ</string>
+    <string name="category_lamps">Đèn</string>
+    <string name="category_other">Khác</string>
+    <string name="category_dining_tables">Bàn ăn</string>
+    <string name="category_dining_chairs">Ghế ăn</string>
+    <string name="category_vases">Bình hoa</string>
+    <string name="category_shelves">Kệ</string>
+    <string name="floor">Sàn</string>
+    <string name="floor_changed">Sàn %1$d</string>
+
+    <!-- Virtual Room strings -->
+    <string name="error_init_3d_view">Không thể khởi tạo chế độ xem 3D: %1$s</string>
+    <string name="room_loaded_loading_furniture">Phòng đã được tải. Đang tải đồ nội thất...</string>
+    <string name="error_loading_room_model">Lỗi khi tải mô hình phòng: %1$s</string>
+    <string name="error_loading_furniture_models">Lỗi khi tải mô hình nội thất: %1$s</string>
+    <string name="viewing_furniture">Đang xem: %1$s</string>
+    <string name="error_loading_room">Không thể tải mô hình phòng</string>
+    <string name="error_loading_furniture">Không thể tải %1$s</string>
+    <string name="screenshot_captured">Ảnh chụp màn hình đã lưu</string>
 </resources>

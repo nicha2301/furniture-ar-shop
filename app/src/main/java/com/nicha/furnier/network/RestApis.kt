@@ -106,7 +106,7 @@ interface RestApis {
     fun getDashboardData(): Call<Dashboard>
 
     @GET("wc/v3/products")
-    fun listAllProducts(): Call<ArrayList<StoreProductModel>>
+    fun listAllProducts(@QueryMap options: Map<String, Int> = emptyMap()): Call<ArrayList<StoreProductModel>>
 
 
     @GET("wc/v3/products/categories")

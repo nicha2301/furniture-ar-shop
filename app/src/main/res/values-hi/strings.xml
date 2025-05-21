@@ -337,4 +337,53 @@
     <string name="lbl_select_image">छवि चुने</string>
     <string name="notification">अधिसूचना</string>
     <string name="lbl_tap_to_retry">पुनः प्रयास करने के लिए थपथपाएं</string>
+    <string name="lbl_place_model">मॉडल रखें</string>
+    
+    <!-- Interior Design -->
+    <string name="title_interior_design">आंतरिक डिजाइन</string>
+    <string name="warning_items_without_models">चेतावनी: %1$d आइटम्स में 3D मॉडल नहीं हैं</string>
+    <string name="error_no_categories">कोई श्रेणी उपलब्ध नहीं है</string>
+    <string name="error_no_products_in_category">श्रेणी %1$s में कोई उत्पाद नहीं हैं</string>
+    <string name="error_no_furniture_selected">कृपया कम से कम एक फर्नीचर आइटम चुनें</string>
+    <string name="selected_items_count">चयनित आइटम: %1$d</string>
+    
+    <string name="furniture_categories">फर्नीचर श्रेणियां</string>
+    <string name="view_virtual_room">वर्चुअल रूम देखें</string>
+    <string name="title_virtual_room">वर्चुअल रूम</string>
+    <string name="reset_view">दृश्य रीसेट करें</string>
+    <string name="capture_screenshot">स्क्रीनशॉट लें</string>
+    <string name="expand_collapse">विस्तार करें या संकुचित करें</string>
+    <string name="selected_furniture">चयनित फर्नीचर</string>
+    <string name="furniture_thumbnail">फर्नीचर थंबनेल</string>
+    <string name="focus_on_item">आइटम पर फोकस करें</string>
+    <string name="furniture_category_icon">फर्नीचर श्रेणी आइकन</string>
+    <string name="furniture_image">फर्नीचर छवि</string>
+    <string name="selected_indicator">चयनित संकेतक</string>
+    <string name="screenshot_failed">स्क्रीनशॉट विफल रहा</string>
+    <string name="no_furniture_available">3D मॉडल के साथ कोई फर्नीचर उपलब्ध नहीं है</string>
+    
+    <!-- Furniture Categories -->
+    <string name="category_beds">बेड</string>
+    <string name="category_sofas">सोफे</string>
+    <string name="category_tables">टेबल</string>
+    <string name="category_chairs">कुर्सियां</string>
+    <string name="category_cabinets">अलमारियां</string>
+    <string name="category_lamps">लैंप</string>
+    <string name="category_other">अन्य</string>
+    <string name="category_dining_tables">डाइनिंग टेबल</string>
+    <string name="category_dining_chairs">डाइनिंग कुर्सियां</string>
+    <string name="category_vases">फूलदान</string>
+    <string name="category_shelves">शेल्फ</string>
+    <string name="floor">फर्श</string>
+    <string name="floor_changed">फर्श %1$d</string>
+
+    <!-- Virtual Room strings -->
+    <string name="error_init_3d_view">3D दृश्य प्रारंभ करने में असमर्थ: %1$s</string>
+    <string name="room_loaded_loading_furniture">कमरा लोड हो गया। फर्नीचर लोड हो रहा है...</string>
+    <string name="error_loading_room_model">कमरा मॉडल लोड करने में त्रुटि: %1$s</string>
+    <string name="error_loading_furniture_models">फर्नीचर मॉडल लोड करने में त्रुटि: %1$s</string>
+    <string name="viewing_furniture">देख रहे हैं: %1$s</string>
+    <string name="error_loading_room">कमरा मॉडल लोड करने में असमर्थ</string>
+    <string name="error_loading_furniture">%1$s लोड करने में असमर्थ</string>
+    <string name="screenshot_captured">स्क्रीनशॉट सहेजा गया</string>
 </resources>

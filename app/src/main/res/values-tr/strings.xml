@@ -336,6 +336,53 @@
     <string name="lbl_cancel_msg">emrinin iptali Nedeni</string>
     <string name="lbl_select_image">Fotoğraf seç</string>
     <string name="notification">Bildirim</string>
-    <string name="lbl_tap_to_retry">Gaýtadan synanyşmak üçin basyň</string>
+    <string name="lbl_tap_to_retry">Tekrar Denemek İçin Dokunun</string>
+    <string name="lbl_place_model">Modeli Yerleştir</string>
 
+    <!-- Interior Design Feature -->
+    <string name="warning_items_without_models">Uyarı: %1$d ürünün 3D modeli yok</string>
+    <string name="error_no_categories">Kullanılabilir kategori yok</string>
+    <string name="error_no_products_in_category">%1$s kategorisinde ürün yok</string>
+    <string name="title_interior_design">İç Tasarım</string>
+    <string name="furniture_categories">Mobilya Kategorileri</string>
+    <string name="selected_items_count">Seçilen Öğeler: %1$d</string>
+    <string name="view_virtual_room">Sanal Odayı Görüntüle</string>
+    <string name="error_no_furniture_selected">Lütfen en az bir mobilya öğesi seçin</string>
+    <string name="title_virtual_room">Sanal Oda</string>
+    <string name="reset_view">Görünümü Sıfırla</string>
+    <string name="capture_screenshot">Ekran Görüntüsü Al</string>
+    <string name="expand_collapse">Genişlet veya Daralt</string>
+    <string name="selected_furniture">Seçilen Mobilya</string>
+    <string name="furniture_thumbnail">Mobilya Küçük Resmi</string>
+    <string name="focus_on_item">Öğeye Odaklan</string>
+    <string name="furniture_category_icon">Mobilya Kategori Simgesi</string>
+    <string name="furniture_image">Mobilya Resmi</string>
+    <string name="selected_indicator">Seçili Gösterge</string>
+    <string name="screenshot_failed">Ekran görüntüsü başarısız oldu</string>
+    <string name="no_furniture_available">3D modellere sahip mobilya bulunmuyor</string>
+
+    <!-- Furniture Categories -->
+    <string name="category_beds">Yataklar</string>
+    <string name="category_sofas">Koltuklar</string>
+    <string name="category_tables">Masalar</string>
+    <string name="category_chairs">Sandalyeler</string>
+    <string name="category_cabinets">Dolaplar</string>
+    <string name="category_lamps">Lambalar</string>
+    <string name="category_other">Diğer</string>
+    <string name="category_dining_tables">Yemek Masaları</string>
+    <string name="category_dining_chairs">Yemek Sandalyeleri</string>
+    <string name="category_vases">Çiçek Vazoları</string>
+    <string name="category_shelves">Raflar</string>
+    <string name="floor">Kat</string>
+    <string name="floor_changed">Kat %1$d</string>
+
+    <!-- Virtual Room strings -->
+    <string name="error_init_3d_view">3D görünüm başlatılamıyor: %1$s</string>
+    <string name="room_loaded_loading_furniture">Oda yüklendi. Mobilyalar yükleniyor...</string>
+    <string name="error_loading_room_model">Oda modeli yüklenirken hata: %1$s</string>
+    <string name="error_loading_furniture_models">Mobilya modelleri yüklenirken hata: %1$s</string>
+    <string name="viewing_furniture">Görüntüleniyor: %1$s</string>
+    <string name="error_loading_room">Oda modeli yüklenemiyor</string>
+    <string name="error_loading_furniture">%1$s yüklenemiyor</string>
+    <string name="screenshot_captured">Ekran görüntüsü kaydedildi</string>
 </resources>

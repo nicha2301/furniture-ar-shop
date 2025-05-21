@@ -113,7 +113,7 @@ object Constants {
         const val VIEWALLID = "viewallid"
         const val SPECIAL_PRODUCT_KEY = "special_product_key"
         const val IS_BANNER = "is_banner"
-
+        const val SELECTED_FURNITURE = "selected_furniture"
     }
 
     object OrderStatus {

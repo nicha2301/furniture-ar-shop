@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "419908830456",
+    "project_id": "ar-app-981f1",
+    "storage_bucket": "ar-app-981f1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419908830456:android:f11f9511c3a0104034670d",
+        "android_client_info": {
+          "package_name": "com.app.nicha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "419908830456-l5t6vs8d69u5llntnj0grvhskr8qjat8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWgnXirqQn_cRUPxs1RXr91328oueFLVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "419908830456-l5t6vs8d69u5llntnj0grvhskr8qjat8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419908830456:android:a56b5cb3632a5f8a34670d",
+        "android_client_info": {
+          "package_name": "com.iqonic.woobox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "419908830456-et2r3q28l3dmf15ues67qlglmavji4l4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iqonic.woobox",
+            "certificate_hash": "34114db8b1a6f130aaebb0c05d4774c22caa406d"
+          }
+        },
+        {
+          "client_id": "419908830456-l5t6vs8d69u5llntnj0grvhskr8qjat8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWgnXirqQn_cRUPxs1RXr91328oueFLVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "419908830456-l5t6vs8d69u5llntnj0grvhskr8qjat8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419908830456:android:b823d1b3298cc33234670d",
+        "android_client_info": {
+          "package_name": "com.nicha.furnier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "419908830456-l5t6vs8d69u5llntnj0grvhskr8qjat8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWgnXirqQn_cRUPxs1RXr91328oueFLVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "419908830456-l5t6vs8d69u5llntnj0grvhskr8qjat8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

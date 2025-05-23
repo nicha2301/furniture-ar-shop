@@ -47,15 +47,13 @@
 
         </FrameLayout>
 
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Bottom Sheet for selected furniture list -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/bottomSheet"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="400dp"
         app:behavior_hideable="false"
         app:behavior_peekHeight="64dp"
         app:cardElevation="8dp"
@@ -96,6 +94,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <!-- Furniture List -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvSelectedFurniture"
                 android:layout_width="match_parent"

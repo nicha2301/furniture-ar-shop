@@ -1,5 +1,6 @@
 package com.nicha.furnier.utils
 
+import io.github.sceneview.math.Position
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -184,5 +185,24 @@ object Constants {
         const val ZOOM_OVERLAY_DURATION_MS = 5000L
         const val MIN_SCALE = 0.2f
         const val MAX_SCALE = 3.0f
+
+         val FURNITURE_POSITIONS = mapOf(
+             "Tables" to Position(3f, 0f, -2f),
+             "Chairs" to Position(3f, 0.2f, -3f),
+             "Decor" to Position(0.25f, 0.8f, 1.4f),
+             "Beds" to Position(3.8f, 3f, -3.5f),
+             "Storage" to Position(2.8f, 3f, -3.5f),
+             "Sofas" to Position(0f, 0f, 0f)
+         )
+
+        val VALID_CATEGORIES = setOf("Tables", "Chairs", "Decor", "Beds", "Storage", "Sofas")
+         
+        const val ROTATION_DURATION_MS = 500L
+
+        const val SCALE_ANIMATION_DURATION_MS = 300L
+         
+        const val HIGHLIGHT_SCALE_FACTOR = 1.05f
+         
+        const val DEFAULT_ALPHA = 1.0f
     }
 }

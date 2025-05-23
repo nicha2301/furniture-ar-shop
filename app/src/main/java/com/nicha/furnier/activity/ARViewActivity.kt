@@ -22,6 +22,7 @@ import com.google.ar.core.TrackingState
 import com.nicha.furnier.AppBaseActivity
 import com.nicha.furnier.R
 import com.nicha.furnier.adapter.ColorAdapter
+import com.nicha.furnier.utils.ColorUtils
 import com.nicha.furnier.utils.Constants
 import com.nicha.furnier.utils.Constants.ControlPara.COLOR_ANIMATION_DURATION_MS
 import com.nicha.furnier.utils.Constants.ControlPara.GESTURE_OVERLAY_DURATION_MS
@@ -140,20 +141,12 @@ class ARViewActivity : AppBaseActivity() {
     // Thiết lập ColorPicker và RecyclerView
     private fun setupColorPicker() {
         btnColorPicker.setOnClickListener { toggleColorPickerVisibility() }
-        val COLOR_LIST = listOf(
-            getString(R.string.color_reset),
-            getString(R.string.color_red),
-            getString(R.string.color_green),
-            getString(R.string.color_blue),
-            getString(R.string.color_yellow),
-            getString(R.string.color_magenta),
-            getString(R.string.color_cyan),
-            getString(R.string.color_white),
-            getString(R.string.color_black)
-        )
+        
+        val colorList = ColorUtils.getARColorsFromResources(this)
+        
         colorRecyclerView.apply {
             layoutManager = LinearLayoutManager(this@ARViewActivity, LinearLayoutManager.VERTICAL, false)
-            adapter = ColorAdapter(COLOR_LIST) { color ->
+            adapter = ColorAdapter(colorList) { color ->
                 if (color == getString(R.string.color_reset)) resetModelColor() else changeModelColor(color)
                 hideColorPicker()
             }

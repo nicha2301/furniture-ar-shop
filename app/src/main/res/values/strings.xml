@@ -409,8 +409,6 @@
     <string name="title_virtual_room">Virtual Room</string>
     <string name="reset_view">Reset View</string>
     <string name="capture_screenshot">Capture Screenshot</string>
-    <string name="expand_collapse">Expand or Collapse</string>
-    <string name="selected_furniture">Selected Furniture</string>
     <string name="furniture_thumbnail">Furniture Thumbnail</string>
     <string name="focus_on_item">Focus on Item</string>
     <string name="furniture_category_icon">Furniture Category Icon</string>
@@ -444,4 +442,12 @@
     <string name="error_loading_room">Unable to load room model</string>
     <string name="error_loading_furniture">Unable to load %1$s</string>
     <string name="screenshot_captured">Screenshot saved</string>
+
+    <string name="select_color">Chọn màu sắc</string>
+    <string name="rotate_model">Xoay mô hình</string>
+
+    <string name="expand_collapse">Mở rộng hoặc thu gọn</string>
+    <string name="selected_furniture">Nội thất đã chọn</string>
+    <string name="model_reset_success">Đã khôi phục về mặc định</string>
+
 </resources>

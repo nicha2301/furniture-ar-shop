@@ -10,7 +10,7 @@ import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat
 import com.nicha.furnier.R
 import com.google.android.material.snackbar.Snackbar
-import com.nicha.furnier.WooBoxApp.Companion.getAppInstance
+import com.nicha.furnier.FurnierApp.Companion.getAppInstance
 import kotlin.math.roundToInt
 
 

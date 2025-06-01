@@ -552,9 +552,9 @@ class HomeFragment1 : BaseFragment() {
     }
 
     /*private fun setNewLocale(language: String) {
-        WooBoxApp.
+        FurnierApp.
         changeLanguage(language)
-        lan = WooBoxApp.language
+        lan = FurnierApp.language
         if (lan != language) {
             (activity as AppBaseActivity).recreate()
         }

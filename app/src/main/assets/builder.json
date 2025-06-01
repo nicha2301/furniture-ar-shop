@@ -76,6 +76,6 @@
     "backgroundColor": "#FCFDFD",
     "consumerKey": "ck_2e7212a4beed4f034d89d8a0d8a97abf3592af11",
     "consumerSecret": "cs_e1cf1a524ce359b8aea8f80881d8f4f776150a14",
-    "appUrl": "http://192.168.1.4/wordpress/wp-json/"
+    "appUrl": "http://192.168.1.166/wordpress/wp-json/"
   }
 }

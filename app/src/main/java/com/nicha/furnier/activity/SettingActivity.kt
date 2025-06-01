@@ -9,7 +9,7 @@ import androidx.annotation.RequiresApi
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.nicha.furnier.AppBaseActivity
 import com.nicha.furnier.R
-import com.nicha.furnier.WooBoxApp
+import com.nicha.furnier.FurnierApp
 import com.nicha.furnier.adapter.RecyclerViewAdapter
 import com.nicha.furnier.utils.Constants
 import com.nicha.furnier.utils.Constants.SharedPref.LANGUAGE
@@ -67,7 +67,7 @@ class SettingActivity : AppBaseActivity() {
 
         lan = getAppLanguage()
         val languages = resources.getStringArray(R.array.language)
-        switchNightMode.isChecked = WooBoxApp.appTheme == Constants.THEME.DARK
+        switchNightMode.isChecked = FurnierApp.appTheme == Constants.THEME.DARK
         mIsLanguageUpdated = false
 
         val dialog = BottomSheetDialog(this)
@@ -93,7 +93,7 @@ class SettingActivity : AppBaseActivity() {
         }
 
         switchNotification.setOnCheckedChangeListener { _, isChecked ->
-            WooBoxApp.getAppInstance().enableNotification(isChecked)
+            FurnierApp.getAppInstance().enableNotification(isChecked)
         }
 
         codes.forEachIndexed { i: Int, s: String ->
@@ -104,7 +104,7 @@ class SettingActivity : AppBaseActivity() {
         }
 
         switchNightMode.setOnCheckedChangeListener { _, isChecked ->
-            WooBoxApp.changeAppTheme(isChecked)
+            FurnierApp.changeAppTheme(isChecked)
             switchToDarkMode(isChecked)
         }
 

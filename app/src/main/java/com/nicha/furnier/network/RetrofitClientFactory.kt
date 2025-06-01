@@ -2,7 +2,7 @@ package com.nicha.furnier.network
 
 import android.util.Log
 import com.google.gson.GsonBuilder
-import com.nicha.furnier.WooBoxApp.Companion.getAppInstance
+import com.nicha.furnier.FurnierApp.Companion.getAppInstance
 import com.nicha.furnier.utils.Constants.SharedPref.CONSUMERKEY
 import com.nicha.furnier.utils.Constants.SharedPref.CONSUMERSECRET
 import com.nicha.furnier.utils.extensions.getSharedPrefInstance

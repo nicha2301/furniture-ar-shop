@@ -32,7 +32,7 @@ import io.github.inflationx.calligraphy3.CalligraphyConfig
 import io.github.inflationx.calligraphy3.CalligraphyInterceptor
 import io.github.inflationx.viewpump.ViewPump
 
-class WooBoxApp : MultiDexApplication() {
+class FurnierApp : MultiDexApplication() {
 
 
     override fun onCreate() {
@@ -73,13 +73,13 @@ class WooBoxApp : MultiDexApplication() {
 
     companion object {
         lateinit var localeManager: LocaleManager
-        private lateinit var appInstance: WooBoxApp
+        private lateinit var appInstance: FurnierApp
         var sharedPrefUtils: SharedPrefUtils? = null
         var noInternetDialog: Dialog? = null
         var restApiImpl: RestApiImpl? = null
         lateinit var language: String
         var appTheme: Int = 0
-        fun getAppInstance(): WooBoxApp = appInstance
+        fun getAppInstance(): FurnierApp = appInstance
         lateinit var mAppData: DashBoardResponse
         var mModeFlag: Boolean = false
 

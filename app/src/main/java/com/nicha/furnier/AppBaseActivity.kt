@@ -18,7 +18,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
-import com.nicha.furnier.WooBoxApp.Companion.noInternetDialog
+import com.nicha.furnier.FurnierApp.Companion.noInternetDialog
 import com.nicha.furnier.activity.DashBoardActivity
 import com.nicha.furnier.utils.Constants.SharedPref.MODE
 import com.nicha.furnier.utils.Constants.THEME.DARK
@@ -59,9 +59,9 @@ open class AppBaseActivity : AppCompatActivity() {
 
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
-        switchToDarkMode(WooBoxApp.appTheme == DARK)
+        switchToDarkMode(FurnierApp.appTheme == DARK)
         super.onCreate(savedInstanceState)
-        WooBoxApp.mAppDataChanges()
+        FurnierApp.mAppDataChanges()
         setStatusBarGradient(this)
         noInternetDialog = null
 
@@ -73,7 +73,7 @@ open class AppBaseActivity : AppCompatActivity() {
                 progressDialog!!.tv_progress_msg.changePrimaryColor()
             }
         }
-        themeApp = WooBoxApp.appTheme
+        themeApp = FurnierApp.appTheme
         if (!isNetworkAvailable()) {
             openNetworkDialog {
                 recreate();onNetworkRetry?.invoke()
@@ -184,7 +184,7 @@ open class AppBaseActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        val appTheme = WooBoxApp.appTheme
+        val appTheme = FurnierApp.appTheme
         if (themeApp != 0 && themeApp != appTheme) {
             launchActivityWithNewTask<DashBoardActivity>()
         }

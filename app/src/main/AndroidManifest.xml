@@ -13,7 +13,7 @@
     <uses-feature android:name="android.hardware.camera" android:required="true" />
 
     <application
-        android:name="com.nicha.furnier.WooBoxApp"
+        android:name="com.nicha.furnier.FurnierApp"
         android:allowBackup="false"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"

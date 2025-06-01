@@ -6,8 +6,8 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.gson.Gson
-import com.nicha.furnier.WooBoxApp.Companion.getAppInstance
-import com.nicha.furnier.WooBoxApp.Companion.restApiImpl
+import com.nicha.furnier.FurnierApp.Companion.getAppInstance
+import com.nicha.furnier.FurnierApp.Companion.restApiImpl
 import com.nicha.furnier.AppBaseActivity
 import com.nicha.furnier.BuildConfig
 import com.nicha.furnier.R

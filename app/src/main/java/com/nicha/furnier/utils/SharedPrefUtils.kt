@@ -2,7 +2,7 @@ package com.nicha.furnier.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.nicha.furnier.WooBoxApp.Companion.getAppInstance
+import com.nicha.furnier.FurnierApp.Companion.getAppInstance
 import com.nicha.furnier.utils.Constants.myPreferences
 
 class SharedPrefUtils {

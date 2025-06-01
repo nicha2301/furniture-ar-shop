@@ -19,9 +19,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.nicha.furnier.WooBoxApp
-import com.nicha.furnier.WooBoxApp.Companion.getAppInstance
-import com.nicha.furnier.WooBoxApp.Companion.noInternetDialog
+import com.nicha.furnier.FurnierApp
+import com.nicha.furnier.FurnierApp.Companion.getAppInstance
+import com.nicha.furnier.FurnierApp.Companion.noInternetDialog
 import com.nicha.furnier.R
 import com.nicha.furnier.activity.DashBoardActivity
 import com.nicha.furnier.models.*
@@ -218,11 +218,11 @@ fun clearLoginPref() {
 }
 
 fun getSharedPrefInstance(): SharedPrefUtils {
-    return if (WooBoxApp.sharedPrefUtils == null) {
-        WooBoxApp.sharedPrefUtils = SharedPrefUtils()
-        WooBoxApp.sharedPrefUtils!!
+    return if (FurnierApp.sharedPrefUtils == null) {
+        FurnierApp.sharedPrefUtils = SharedPrefUtils()
+        FurnierApp.sharedPrefUtils!!
     } else {
-        WooBoxApp.sharedPrefUtils!!
+        FurnierApp.sharedPrefUtils!!
     }
 }
 

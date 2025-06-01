@@ -39,7 +39,7 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
-import com.nicha.furnier.WooBoxApp.Companion.getAppInstance
+import com.nicha.furnier.FurnierApp.Companion.getAppInstance
 import com.nicha.furnier.R
 
 @RequiresPermission(Manifest.permission.ACCESS_NETWORK_STATE)

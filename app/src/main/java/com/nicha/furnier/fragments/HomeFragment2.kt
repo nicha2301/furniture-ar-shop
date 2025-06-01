@@ -628,8 +628,8 @@ class HomeFragment2 : BaseFragment() {
     }
 
    /* private fun setNewLocale(language: String) {
-       // WooBoxApp.changeLanguage(language)
-        lan = WooBoxApp.language
+       // FurnierApp.changeLanguage(language)
+        lan = FurnierApp.language
         if (lan != language) {
             (activity as AppBaseActivity).recreate()
         }

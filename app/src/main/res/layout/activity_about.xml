@@ -62,7 +62,7 @@
                     android:layout_marginTop="@dimen/spacing_standard_new"
                     android:textColor="@color/textColorPrimary"
                     android:textSize="@dimen/font_size_small"
-                    tools:text="© WooBox 2020 | All rights reserved" />
+                    tools:text="© Furnier 2025 | All rights reserved" />
 
                 <TextView
                     android:id="@+id/tvTOC"

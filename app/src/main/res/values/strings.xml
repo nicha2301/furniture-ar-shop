@@ -443,11 +443,22 @@
     <string name="error_loading_furniture">Unable to load %1$s</string>
     <string name="screenshot_captured">Screenshot saved</string>
 
-    <string name="select_color">Chọn màu sắc</string>
-    <string name="rotate_model">Xoay mô hình</string>
+    <string name="select_color">Select color</string>
+    <string name="rotate_model">Rotate model</string>
+    <string name="expand_collapse">Expand or collapse</string>
+    <string name="selected_furniture">Selected furniture</string>
+    <string name="model_reset_success">Reset to default</string>
 
-    <string name="expand_collapse">Mở rộng hoặc thu gọn</string>
-    <string name="selected_furniture">Nội thất đã chọn</string>
-    <string name="model_reset_success">Đã khôi phục về mặc định</string>
+
+    <string name="material_reset_option">Reset original material</string>
+    <string name="material_metal">Metal</string>
+    <string name="material_glossy">Glossy</string>
+    <string name="material_plastic">Plastic</string>
+    <string name="material_rough">Rough</string>
+    <string name="material_wood">Wood</string>
+    <string name="material_changed">Material changed: %1$s</string>
+    <string name="material_reset">Original material restored</string>
+    <string name="error_invalid_material">Error applying material</string>
+    <string name="material_picker">Select material</string>
 
 </resources>

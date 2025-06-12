@@ -385,4 +385,21 @@
     <string name="error_loading_room">Tidak dapat memuat model ruangan</string>
     <string name="error_loading_furniture">Tidak dapat memuat %1$s</string>
     <string name="screenshot_captured">Tangkapan layar disimpan</string>
+
+    <string name="select_color">Pilih warna</string>
+    <string name="rotate_model">Putar model</string>
+    <string name="model_reset_success">Berhasil direset ke default</string>
+
+
+    <!-- Material related strings -->
+    <string name="material_reset_option">Setel ulang material asli</string>
+    <string name="material_metal">Logam</string>
+    <string name="material_glossy">Mengkilap</string>
+    <string name="material_plastic">Plastik</string>
+    <string name="material_rough">Kasar</string>
+    <string name="material_wood">Kayu</string>
+    <string name="material_changed">Material diubah: %1$s</string>
+    <string name="material_reset">Material asli dipulihkan</string>
+    <string name="error_invalid_material">Kesalahan menerapkan material</string>
+    <string name="material_picker">Pilih material</string>
 </resources>

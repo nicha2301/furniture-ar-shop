@@ -387,4 +387,21 @@
     <string name="error_loading_furniture">Impossible de charger %1$s</string>
     <string name="screenshot_captured">Capture d\'écran enregistrée</string>
 
+    <string name="select_color">Choisir la couleur</string>
+    <string name="rotate_model">Faire pivoter le modèle</string>
+    <string name="model_reset_success">Réinitialisé par défaut</string>
+
+
+    <!-- Material related strings -->
+    <string name="material_reset_option">Réinitialiser le matériau d\'origine</string>
+    <string name="material_metal">Métal</string>
+    <string name="material_glossy">Brillant</string>
+    <string name="material_plastic">Plastique</string>
+    <string name="material_rough">Rugueux</string>
+    <string name="material_wood">Bois</string>
+    <string name="material_changed">Matériau changé: %1$s</string>
+    <string name="material_reset">Matériau d\'origine restauré</string>
+    <string name="error_invalid_material">Erreur lors de l\'application du matériau</string>
+    <string name="material_picker">Sélectionner le matériau</string>
+
 </resources>

@@ -385,4 +385,21 @@
     <string name="error_loading_room">Oda modeli yüklenemiyor</string>
     <string name="error_loading_furniture">%1$s yüklenemiyor</string>
     <string name="screenshot_captured">Ekran görüntüsü kaydedildi</string>
+
+    <string name="select_color">Renk seç</string>
+    <string name="rotate_model">Modeli döndür</string>
+    <string name="model_reset_success">Varsayılana sıfırlandı</string>
+
+
+    <!-- Material related strings -->
+    <string name="material_reset_option">Orijinal malzemeyi sıfırla</string>
+    <string name="material_metal">Metal</string>
+    <string name="material_glossy">Parlak</string>
+    <string name="material_plastic">Plastik</string>
+    <string name="material_rough">Pürüzlü</string>
+    <string name="material_wood">Ahşap</string>
+    <string name="material_changed">Malzeme değiştirildi: %1$s</string>
+    <string name="material_reset">Orijinal malzeme geri yüklendi</string>
+    <string name="error_invalid_material">Malzeme uygulanırken hata oluştu</string>
+    <string name="material_picker">Malzeme seç</string>
 </resources>

@@ -386,4 +386,21 @@
     <string name="error_loading_room">لا يمكن تحميل نموذج الغرفة</string>
     <string name="error_loading_furniture">لا يمكن تحميل %1$s</string>
     <string name="screenshot_captured">تم حفظ لقطة الشاشة</string>
+
+    <string name="select_color">اختر اللون</string>
+    <string name="rotate_model">تدوير النموذج</string>
+    <string name="model_reset_success">تمت إعادة التعيين إلى الوضع الافتراضي</string>
+
+
+    <!-- Material related strings -->
+    <string name="material_reset_option">إعادة تعيين المادة الأصلية</string>
+    <string name="material_metal">معدن</string>
+    <string name="material_glossy">لامع</string>
+    <string name="material_plastic">بلاستيك</string>
+    <string name="material_rough">خشن</string>
+    <string name="material_wood">خشب</string>
+    <string name="material_changed">تم تغيير المادة: %1$s</string>
+    <string name="material_reset">تمت استعادة المادة الأصلية</string>
+    <string name="error_invalid_material">خطأ في تطبيق المادة</string>
+    <string name="material_picker">اختر المادة</string>
 </resources>

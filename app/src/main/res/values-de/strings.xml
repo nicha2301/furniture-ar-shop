@@ -386,5 +386,22 @@
     <string name="error_loading_room">Raummodell kann nicht geladen werden</string>
     <string name="error_loading_furniture">%1$s kann nicht geladen werden</string>
     <string name="screenshot_captured">Screenshot gespeichert</string>
+
+    <string name="select_color">Farbe auswählen</string>
+    <string name="rotate_model">Modell drehen</string>
+    <string name="model_reset_success">Auf Standard zurückgesetzt</string>
+
+
+    <!-- Material related strings -->
+    <string name="material_reset_option">Originalmaterial zurücksetzen</string>
+    <string name="material_metal">Metall</string>
+    <string name="material_glossy">Glänzend</string>
+    <string name="material_plastic">Kunststoff</string>
+    <string name="material_rough">Rau</string>
+    <string name="material_wood">Holz</string>
+    <string name="material_changed">Material geändert: %1$s</string>
+    <string name="material_reset">Originalmaterial wiederhergestellt</string>
+    <string name="error_invalid_material">Fehler beim Anwenden des Materials</string>
+    <string name="material_picker">Material auswählen</string>
 </resources>
 

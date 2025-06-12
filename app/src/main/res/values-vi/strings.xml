@@ -386,4 +386,21 @@
     <string name="error_loading_room">Không thể tải mô hình phòng</string>
     <string name="error_loading_furniture">Không thể tải %1$s</string>
     <string name="screenshot_captured">Ảnh chụp màn hình đã lưu</string>
+
+    <string name="select_color">Chọn màu sắc</string>
+    <string name="rotate_model">Xoay mô hình</string>
+
+    <string name="model_reset_success">Đã khôi phục về mặc định</string>
+
+    <!-- Material related strings -->
+    <string name="material_reset_option">Khôi phục vật liệu gốc</string>
+    <string name="material_metal">Kim loại</string>
+    <string name="material_glossy">Bóng loáng</string>
+    <string name="material_plastic">Nhựa</string>
+    <string name="material_rough">Thô ráp</string>
+    <string name="material_wood">Gỗ</string>
+    <string name="material_changed">Đã thay đổi vật liệu: %1$s</string>
+    <string name="material_reset">Đã khôi phục vật liệu gốc</string>
+    <string name="error_invalid_material">Lỗi áp dụng vật liệu</string>
+    <string name="material_picker">Chọn vật liệu</string>
 </resources>

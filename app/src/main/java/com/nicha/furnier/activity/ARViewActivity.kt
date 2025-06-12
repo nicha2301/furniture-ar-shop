@@ -22,6 +22,8 @@ import com.google.ar.core.TrackingState
 import com.nicha.furnier.AppBaseActivity
 import com.nicha.furnier.R
 import com.nicha.furnier.adapter.ColorAdapter
+import com.nicha.furnier.adapter.MaterialAdapter
+import com.nicha.furnier.models.MaterialItem
 import com.nicha.furnier.utils.ColorUtils
 import com.nicha.furnier.utils.Constants
 import com.nicha.furnier.utils.Constants.ControlPara.COLOR_ANIMATION_DURATION_MS
@@ -32,10 +34,13 @@ import com.nicha.furnier.utils.Constants.ControlPara.SCAN_CHECK_INTERVAL_MS
 import com.nicha.furnier.utils.Constants.ControlPara.ZOOM_OVERLAY_DURATION_MS
 import com.nicha.furnier.utils.Constants.KeyIntent.PRODUCT_ID
 import com.nicha.furnier.utils.Constants.KeyIntent.MODEL_URL
+import com.nicha.furnier.utils.getARMaterialsFromResources
 import io.github.sceneview.ar.ArSceneView
 import io.github.sceneview.ar.node.ArModelNode
 import io.github.sceneview.ar.node.PlacementMode
 import io.github.sceneview.material.setBaseColor
+import io.github.sceneview.material.setMetallicFactor
+import io.github.sceneview.material.setRoughnessFactor
 import io.github.sceneview.math.Position
 import io.github.sceneview.math.Rotation
 import io.github.sceneview.utils.Color as SceneViewColor
@@ -57,7 +62,9 @@ class ARViewActivity : AppBaseActivity() {
     private lateinit var placeButton: AppCompatImageButton
     private lateinit var closeButton: AppCompatImageButton
     private lateinit var btnColorPicker: AppCompatImageButton
+    private lateinit var btnMaterialPicker: AppCompatImageButton
     private lateinit var colorRecyclerView: RecyclerView
+    private lateinit var materialRecyclerView: RecyclerView
     private lateinit var overlayContainer: ConstraintLayout
     private lateinit var overlayAnimation: LottieAnimationView
     private lateinit var overlayText: TextView
@@ -68,7 +75,9 @@ class ARViewActivity : AppBaseActivity() {
     private var isOverlayVisible = false
     private var isScanningComplete = false
     private var originalColor: FloatArray? = null
+    private var originalMaterial: MaterialItem? = null
     private var currentOverlayStep: OverlayStep? = null
+    private var canInteractWithModel = false
 
     private val handler = Handler(Looper.getMainLooper())
     private val scanCheckRunnable = object : Runnable {
@@ -96,13 +105,16 @@ class ARViewActivity : AppBaseActivity() {
         placeButton = findViewById(R.id.place)
         closeButton = findViewById(R.id.fabClose)
         btnColorPicker = findViewById(R.id.btnColorPicker)
+        btnMaterialPicker = findViewById(R.id.btnMaterialPicker)
         colorRecyclerView = findViewById(R.id.colorRecyclerView)
+        materialRecyclerView = findViewById(R.id.materialRecyclerView)
         overlayContainer = findViewById(R.id.overlayContainer)
         overlayAnimation = findViewById(R.id.overlayAnimation)
         overlayText = findViewById(R.id.overlayText)
 
         placeButton.setOnClickListener { if (!isModelPlaced && !isOverlayVisible) placeModel() }
         setupColorPicker()
+        setupMaterialPicker()
         closeButton.setOnClickListener {
             finish()
         }
@@ -140,7 +152,10 @@ class ARViewActivity : AppBaseActivity() {
 
     // Thiết lập ColorPicker và RecyclerView
     private fun setupColorPicker() {
-        btnColorPicker.setOnClickListener { toggleColorPickerVisibility() }
+        btnColorPicker.setOnClickListener { 
+            toggleColorPickerVisibility() 
+            hideMaterialPicker()
+        }
         
         val colorList = ColorUtils.getARColorsFromResources(this)
         
@@ -149,6 +164,24 @@ class ARViewActivity : AppBaseActivity() {
             adapter = ColorAdapter(colorList) { color ->
                 if (color == getString(R.string.color_reset)) resetModelColor() else changeModelColor(color)
                 hideColorPicker()
+            }
+        }
+    }
+
+    // Thiết lập MaterialPicker và RecyclerView
+    private fun setupMaterialPicker() {
+        btnMaterialPicker.setOnClickListener { 
+            toggleMaterialPickerVisibility() 
+            hideColorPicker()
+        }
+        
+        val materialList = getARMaterialsFromResources(this)
+        
+        materialRecyclerView.apply {
+            layoutManager = LinearLayoutManager(this@ARViewActivity, LinearLayoutManager.VERTICAL, false)
+            adapter = MaterialAdapter(materialList) { material ->
+                if (material.isReset) resetModelMaterial() else changeModelMaterial(material)
+                hideMaterialPicker()
             }
         }
     }
@@ -181,9 +214,37 @@ class ARViewActivity : AppBaseActivity() {
             .start()
     }
 
+    // Hiển thị hoặc ẩn MaterialPicker với animation
+    private fun toggleMaterialPickerVisibility() {
+        if (materialRecyclerView.visibility == View.VISIBLE) {
+            hideMaterialPicker()
+        } else {
+            materialRecyclerView.apply {
+                alpha = 0f
+                translationY = -50f
+                visibility = View.VISIBLE
+                animate()
+                    .alpha(1f)
+                    .translationY(0f)
+                    .setDuration(COLOR_ANIMATION_DURATION_MS)
+                    .setInterpolator(android.view.animation.DecelerateInterpolator())
+                    .start()
+            }
+        }
+    }
+
+    private fun hideMaterialPicker() {
+        materialRecyclerView.animate()
+            .alpha(0f)
+            .translationY(50f)
+            .setDuration(COLOR_ANIMATION_DURATION_MS)
+            .withEndAction { materialRecyclerView.visibility = View.GONE }
+            .start()
+    }
+
     // Thay đổi màu mô hình AR
     private fun changeModelColor(colorHex: String) {
-        if (!isModelPlaced || modelNode.anchor == null) return
+        if (!isModelPlaced || !canInteractWithModel || modelNode.anchor == null) return
         try {
             val color = Color.parseColor(colorHex)
             val r = Color.red(color) / 255f
@@ -198,7 +259,7 @@ class ARViewActivity : AppBaseActivity() {
 
     // Đặt lại màu gốc của mô hình
     private fun resetModelColor() {
-        if (isModelPlaced && modelNode.anchor != null && originalColor != null) {
+        if (isModelPlaced && canInteractWithModel && modelNode.anchor != null && originalColor != null) {
             applyColorToModel(originalColor!![0], originalColor!![1], originalColor!![2], originalColor!![3])
         }
     }
@@ -206,6 +267,42 @@ class ARViewActivity : AppBaseActivity() {
     private fun applyColorToModel(r: Float, g: Float, b: Float, a: Float) {
         modelNode.modelInstance?.materialInstances?.forEach { material ->
             material.setBaseColor(SceneViewColor(r, g, b, a))
+        }
+    }
+
+    // Thay đổi chất liệu mô hình AR
+    private fun changeModelMaterial(material: MaterialItem) {
+        if (!isModelPlaced || !canInteractWithModel || modelNode.anchor == null) return
+        try {
+            if (originalMaterial == null) {
+                // Lưu trữ chất liệu gốc nếu chưa có
+                originalMaterial = MaterialItem(
+                    id = "original",
+                    name = "Original",
+                    metallic = 0.0f,
+                    roughness = 0.5f,
+                    isReset = true
+                )
+            }
+            applyMaterialToModel(material.metallic, material.roughness)
+            Snackbar.make(arSceneView, getString(R.string.material_changed, material.name), Snackbar.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            showError(ARError.Generic(getString(R.string.error_invalid_material)))
+        }
+    }
+
+    // Đặt lại chất liệu gốc của mô hình
+    private fun resetModelMaterial() {
+        if (isModelPlaced && canInteractWithModel && modelNode.anchor != null && originalMaterial != null) {
+            applyMaterialToModel(originalMaterial!!.metallic, originalMaterial!!.roughness)
+            Snackbar.make(arSceneView, getString(R.string.material_reset), Snackbar.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun applyMaterialToModel(metallic: Float, roughness: Float) {
+        modelNode.modelInstance?.materialInstances?.forEach { material ->
+            material.setMetallicFactor(metallic)
+            material.setRoughnessFactor(roughness)
         }
     }
 
@@ -226,12 +323,23 @@ class ARViewActivity : AppBaseActivity() {
             ) {
                 modelInstance?.materialInstances?.firstOrNull()?.let { material ->
                     originalColor = floatArrayOf(1f, 1f, 1f, 1f)
+                    // Lưu trữ chất liệu gốc
+                    originalMaterial = MaterialItem(
+                        id = "original",
+                        name = "Original",
+                        metallic = 0.0f,
+                        roughness = 0.5f,
+                        isReset = true
+                    )
                 }
             }
             onAnchorChanged = { anchor ->
                 placeButton.visibility = if (anchor != null) View.GONE else View.VISIBLE
                 btnColorPicker.visibility = if (anchor != null) View.VISIBLE else View.GONE
+                btnMaterialPicker.visibility = if (anchor != null) View.VISIBLE else View.GONE
             }
+            
+            isPositionEditable = false
         }
         arSceneView.addChild(modelNode)
     }
@@ -258,8 +366,10 @@ class ARViewActivity : AppBaseActivity() {
         try {
             if (modelNode.anchor == null && arSceneView.arSession?.isTrackingPlane == true) {
                 modelNode.anchor()
+                modelNode.isPositionEditable = false 
                 arSceneView.planeRenderer.isVisible = false
                 isModelPlaced = true
+                canInteractWithModel = true
                 hideOverlay()
                 showOverlay(OverlayStep.ROTATE, GESTURE_OVERLAY_DURATION_MS) { showOverlay(OverlayStep.ZOOM, ZOOM_OVERLAY_DURATION_MS) }
             } else {
@@ -315,9 +425,11 @@ class ARViewActivity : AppBaseActivity() {
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         if (event == null || isOverlayVisible) return super.onTouchEvent(event)
         try {
-            if (isModelPlaced && modelNode.anchor != null && arSceneView.arSession?.isTrackingPlane == true) {
+            if (isModelPlaced && canInteractWithModel && modelNode.anchor != null && arSceneView.arSession?.isTrackingPlane == true) {
                 gestureDetector.onTouchEvent(event)
                 scaleGestureDetector.onTouchEvent(event)
+                
+                return true
             }
         } catch (e: Exception) {
             showError(ARError.NotTracking)

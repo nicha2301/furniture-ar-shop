@@ -385,4 +385,16 @@
     <string name="error_loading_room">Kan nie kamermodel laai nie</string>
     <string name="error_loading_furniture">Kan nie %1$s laai nie</string>
     <string name="screenshot_captured">Skermkiekie gestoor</string>
+
+    <!-- Material related strings -->
+    <string name="material_reset_option">Herstel oorspronklike materiaal</string>
+    <string name="material_metal">Metaal</string>
+    <string name="material_glossy">Blink</string>
+    <string name="material_plastic">Plastiek</string>
+    <string name="material_rough">Grof</string>
+    <string name="material_wood">Hout</string>
+    <string name="material_changed">Materiaal verander: %1$s</string>
+    <string name="material_reset">Oorspronklike materiaal herstel</string>
+    <string name="error_invalid_material">Fout met toepassing van materiaal</string>
+    <string name="material_picker">Kies materiaal</string>
 </resources>

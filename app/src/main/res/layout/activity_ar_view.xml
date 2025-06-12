@@ -77,6 +77,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnMaterialPicker"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_circle_button"
+        android:contentDescription="@string/material_picker"
+        android:padding="12dp"
+        android:src="@drawable/ic_material"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fabClose" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btnColorPicker"
         android:layout_width="48dp"
         android:layout_height="48dp"
@@ -89,7 +102,19 @@
         android:foreground="@null"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fabClose" />
+        app:layout_constraintTop_toBottomOf="@id/btnMaterialPicker" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/materialRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_rounded_rect"
+        android:elevation="8dp"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/btnMaterialPicker"
+        app:layout_constraintTop_toBottomOf="@+id/btnMaterialPicker" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/colorRecyclerView"

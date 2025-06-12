@@ -386,4 +386,21 @@
     <string name="error_loading_room">कमरा मॉडल लोड करने में असमर्थ</string>
     <string name="error_loading_furniture">%1$s लोड करने में असमर्थ</string>
     <string name="screenshot_captured">स्क्रीनशॉट सहेजा गया</string>
+
+    <string name="select_color">रंग चुनें</string>
+    <string name="rotate_model">मॉडल घुमाएँ</string>
+    <string name="model_reset_success">डिफ़ॉल्ट पर रीसेट किया गया</string>
+
+
+    <!-- Material related strings -->
+    <string name="material_reset_option">मूल सामग्री रीसेट करें</string>
+    <string name="material_metal">धातु</string>
+    <string name="material_glossy">चमकदार</string>
+    <string name="material_plastic">प्लास्टिक</string>
+    <string name="material_rough">खुरदरा</string>
+    <string name="material_wood">लकड़ी</string>
+    <string name="material_changed">सामग्री बदली गई: %1$s</string>
+    <string name="material_reset">मूल सामग्री बहाल की गई</string>
+    <string name="error_invalid_material">सामग्री लागू करने में त्रुटि</string>
+    <string name="material_picker">सामग्री चुनें</string>
 </resources>

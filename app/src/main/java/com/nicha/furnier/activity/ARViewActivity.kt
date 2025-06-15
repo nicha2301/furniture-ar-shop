@@ -366,7 +366,7 @@ class ARViewActivity : AppBaseActivity() {
         try {
             if (modelNode.anchor == null && arSceneView.arSession?.isTrackingPlane == true) {
                 modelNode.anchor()
-                modelNode.isPositionEditable = false 
+                modelNode.isPositionEditable = true 
                 arSceneView.planeRenderer.isVisible = false
                 isModelPlaced = true
                 canInteractWithModel = true
